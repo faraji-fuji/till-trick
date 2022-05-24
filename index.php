@@ -10,14 +10,18 @@ include("header.php");
                     Crops
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">Vegetables</a>
-                <a href="#" class="list-group-item list-group-item-action">Cereals</a>
+                <a href="#" class="list-group-item list-group-item-action">Cereals and Legumes</a>
                 <a href="#" class="list-group-item list-group-item-action">Fruits</a>
                 <a href="#" class="list-group-item list-group-item-action">Spices</a>
-                <a href="#" class="list-group-item list-group-item-action">Sugar Cane</a>
-                <a href="#" class="list-group-item list-group-item-action">Legumes</a>
                 <a href="#" class="list-group-item list-group-item-action">Tubers</a>
                 <a href="#" class="list-group-item list-group-item-action">Nuts</a>
-                <a href="#" class="list-group-item list-group-item-action">Fodder</a>
+                <a href="#" class="list-group-item list-group-item-action active bg-success" aria-current="true">
+                    Animal Products
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Eggs</a>
+                <a href="#" class="list-group-item list-group-item-action">Milk</a>
+                <a href="#" class="list-group-item list-group-item-action">Poultry</a>
+                <a href="#" class="list-group-item list-group-item-action">Wool</a>
             </div>
         </div>
         <div class="col-7">
@@ -29,21 +33,21 @@ include("header.php");
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://picsum.photos/712/384" class="d-block w-100 rounded-top" alt="...">
+                        <img src="https://picsum.photos/800/500" class="d-block w-100 rounded-top" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://picsum.photos/712/384" class="d-block w-100 rounded-top" alt="...">
+                        <img src="https://picsum.photos/800/499" class="d-block w-100 rounded-top" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://picsum.photos/712/384" class="d-block w-100 rounded-top" alt="...">
+                        <img src="https://picsum.photos/800/501" class="d-block w-100 rounded-top" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Third slide label</h5>
                             <p>Some representative placeholder content for the third slide.</p>
@@ -60,23 +64,7 @@ include("header.php");
                 </button>
             </div>
         </div>
-        <div class="col-2">
-            <div class="list-group shadow mb-5 bg-body rounded">
-                <a href="#" class="list-group-item list-group-item-action active bg-success" aria-current="true">
-                    Animal Products
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">Eggs</a>
-                <a href="#" class="list-group-item list-group-item-action">Milk</a>
-                <a href="#" class="list-group-item list-group-item-action">Quails</a>
-                <a href="#" class="list-group-item list-group-item-action">Poultry</a>
-                <a href="#" class="list-group-item list-group-item-action">Wool</a>
-                <a href="#" class="list-group-item list-group-item-action">Animal Skins</a>
-                <a href="#" class="list-group-item list-group-item-action"> </a>
-                <a href="#" class="list-group-item list-group-item-action"> </a>
-                <a href="#" class="list-group-item list-group-item-action"> </a>
-                <!-- <a class="list-group-item list-group-item-action disabled">Spices</a> -->
-            </div>
-        </div>
+        
     </div>
 </div>
 

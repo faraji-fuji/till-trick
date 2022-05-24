@@ -2,7 +2,7 @@
   <footer class="row row-cols-5 py-5 my-5 border-top">
     <div class="col">
       <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-        <img src="images\cashcroplogo.png" width="250" alt="" class="header-logo">
+        <img src="images\cashcroplogo1png" width="250" alt="" class="header-logo">
       </a>
       <p class="text-muted text-center">&copy; 2022</p>
     </div>
