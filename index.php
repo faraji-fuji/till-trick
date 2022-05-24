@@ -2,23 +2,22 @@
 include("header.php");
 ?>
 
-<div class="container-fluid text-left">
+<div class="container-fluid text-left shadow-sm">
     <div class="row justify-content-evenly">
         <div class="col-2">
             <div class="list-group  shadow mb-5 bg-body rounded">
-                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                <a href="#" class="list-group-item list-group-item-action active bg-success" aria-current="true">
                     Crops
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">Vegetables</a>
                 <a href="#" class="list-group-item list-group-item-action">Cereals</a>
                 <a href="#" class="list-group-item list-group-item-action">Fruits</a>
                 <a href="#" class="list-group-item list-group-item-action">Spices</a>
-                <a href="#" class="list-group-item list-group-item-action">Fruits</a>
+                <a href="#" class="list-group-item list-group-item-action">Sugar Cane</a>
                 <a href="#" class="list-group-item list-group-item-action">Legumes</a>
-                <a href="#" class="list-group-item list-group-item-action">Fruits</a>
-                <a href="#" class="list-group-item list-group-item-action">Legumes</a>
-                <a href="#" class="list-group-item list-group-item-action">Fruits</a>
-                <!-- <a class="list-group-item list-group-item-action disabled">Spices</a> -->
+                <a href="#" class="list-group-item list-group-item-action">Tubers</a>
+                <a href="#" class="list-group-item list-group-item-action">Nuts</a>
+                <a href="#" class="list-group-item list-group-item-action">Fodder</a>
             </div>
         </div>
         <div class="col-7">
@@ -63,18 +62,18 @@ include("header.php");
         </div>
         <div class="col-2">
             <div class="list-group shadow mb-5 bg-body rounded">
-                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                <a href="#" class="list-group-item list-group-item-action active bg-success" aria-current="true">
                     Animal Products
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">Eggs</a>
                 <a href="#" class="list-group-item list-group-item-action">Milk</a>
                 <a href="#" class="list-group-item list-group-item-action">Quails</a>
                 <a href="#" class="list-group-item list-group-item-action">Poultry</a>
-                <a href="#" class="list-group-item list-group-item-action">Milk</a>
-                <a href="#" class="list-group-item list-group-item-action">Fruits</a>
-                <a href="#" class="list-group-item list-group-item-action">Legumes</a>
-                <a href="#" class="list-group-item list-group-item-action">Fruits</a>
-                <a href="#" class="list-group-item list-group-item-action">Fruits</a>
+                <a href="#" class="list-group-item list-group-item-action">Wool</a>
+                <a href="#" class="list-group-item list-group-item-action">Animal Skins</a>
+                <a href="#" class="list-group-item list-group-item-action"> </a>
+                <a href="#" class="list-group-item list-group-item-action"> </a>
+                <a href="#" class="list-group-item list-group-item-action"> </a>
                 <!-- <a class="list-group-item list-group-item-action disabled">Spices</a> -->
             </div>
         </div>

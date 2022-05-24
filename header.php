@@ -9,60 +9,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    <title>CashCrop</title>
   </head>
   <body>
-    <header>
-    <div class="px-3 py-2 bg-dark text-white">
+    <header class="sticky-top bg-success bg-gradient shadow">
       <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img src="images\cashcroplogo.png" width="50" alt="" class="header-logo">
           </a>
 
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-            <li>
-              <a href="#" class="nav-link text-secondary">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
-                Orders
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
-                Products
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
-                Customers
-              </a>
-            </li>
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-light">Home</a></li>
+            <li><a href="#" class="nav-link px-2 link-light">Features</a></li>
+            <li><a href="#" class="nav-link px-2 link-light">Pricing</a></li>
+            <li><a href="#" class="nav-link px-2 link-light">FAQs</a></li>
+            <li><a href="#" class="nav-link px-2 link-light">About</a></li>
           </ul>
-        </div>
-      </div>
-    </div>
-    <div class="px-3 py-2 border-bottom mb-3">
-      <div class="container d-flex flex-wrap justify-content-center">
-        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-        </form>
 
-        <div class="text-end">
-          <a href="login.php"><button type="button" class="btn btn-light text-dark me-2">Login</button></a>
-          
-          <button type="button" class="btn btn-primary">Sign-up</button>
-        </div>
+          <div class="col-md-3 text-end">
+            <a href="login.php">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+            </a>
+            <a href="">
+              <button type="button" class="btn btn-outline-light">Sign-up</button>
+            </a>
+          </div>
+        </header>
       </div>
-    </div>
-  </header>
+    </header>

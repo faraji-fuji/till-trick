@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container-fluid">
   <footer class="row row-cols-5 py-5 my-5 border-top">
     <div class="col">
       <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        <img src="images\cashcroplogo.png" width="250" alt="" class="header-logo">
       </a>
-      <p class="text-muted">&copy; 2022</p>
+      <p class="text-muted text-center">&copy; 2022</p>
     </div>
 
     <div class="col">
