@@ -63,9 +63,11 @@ include("header.php")
 </div>
 
 <?php
+include("connect.php");
+
 
 if(isset($_POST["register"])){
-
+    //please sanitize user input
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email_address = $_POST['email_address'];
@@ -74,13 +76,9 @@ if(isset($_POST["register"])){
     $user_location = $_POST['user_location'];
     $user_password = $_POST['user_password'];
 
-    // echo "<h1>$first_name</h1>";
-    // echo "<h1>$last_name</h1>";
-    // echo "<h1>$email_address</h1>";
-    // echo "<h1>$physical_address</h1>";
-    // echo "<h1>$member_type</h1>";
-    // echo "<h1>$user_location</h1>";
-    // echo "<h1>$user_password</h1>";
+    //save user data
+    insert_into_user($first_name, $last_name, $email_address, $physical_address, $member_type, $user_location, $user_password);
 }
+
 include("footer.php")
 ?>
