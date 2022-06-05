@@ -8,13 +8,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    <title>CashCrop</title>
     <link rel="stylesheet" href="css\register.css">
+    <link rel="stylesheet" href="css\index.css">
   </head>
   <body>
     <header class="sticky-top bg-success bg-gradient shadow">
       <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
           <a href="index.php" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <img src="images\cashcroplogo.png" width="100" alt="" class="header-logo">
+            <img src="images\cashcroplogo.png" width="50" alt="" class="header-logo">
           </a>
 
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">

@@ -4,7 +4,7 @@ include("header.php");
 
 <div class="container-fluid text-left shadow-sm">
     <div class="row justify-content-evenly">
-        <div class="col-2">
+        <!-- <div class="col-2">
             <div class="list-group  shadow mb-5 bg-body rounded">
                 <a href="#" class="list-group-item list-group-item-action active bg-success" aria-current="true">
                     Crops
@@ -23,8 +23,8 @@ include("header.php");
                 <a href="#" class="list-group-item list-group-item-action">Poultry</a>
                 <a href="#" class="list-group-item list-group-item-action">Wool</a>
             </div>
-        </div>
-        <div class="col-7">
+        </div> -->
+        <div class="col-10">
             <div id="carouselExampleCaptions" class="carousel slide shadow mb-5 bg-body rounded" data-bs-ride="false">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -33,21 +33,21 @@ include("header.php");
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://picsum.photos/800/500" class="d-block w-100 rounded-top" alt="...">
+                        <img src="https://picsum.photos/800/350" class="d-block w-100 rounded-top" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://picsum.photos/800/499" class="d-block w-100 rounded-top" alt="...">
+                        <img src="https://picsum.photos/800/351" class="d-block w-100 rounded-top" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://picsum.photos/800/501" class="d-block w-100 rounded-top" alt="...">
+                        <img src="https://picsum.photos/800/349" class="d-block w-100 rounded-top" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Third slide label</h5>
                             <p>Some representative placeholder content for the third slide.</p>
