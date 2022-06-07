@@ -1,5 +1,5 @@
 <?php
-include("header.php")
+include("header_main.php")
 ?>
 
 <div class="container shadow register-img">
@@ -65,7 +65,6 @@ include("header.php")
 <?php
 include("connect.php");
 
-
 if(isset($_POST["register"])){
     //please sanitize user input
     $first_name = $_POST['first_name'];
@@ -77,7 +76,19 @@ if(isset($_POST["register"])){
     $user_password = $_POST['user_password'];
 
     //save user data
-    insert_into_user($first_name, $last_name, $email_address, $physical_address, $member_type, $user_location, $user_password);
+    $insert_status = insert_into_user($first_name, $last_name, $email_address, $physical_address, $member_type, $user_location, $user_password);
+    
+    // success message
+    if ($insert_status){
+        echo "<script>";
+        echo "alert('Registered Successfuly. Please proceed to login')";
+        echo "</script>";
+    }
+    else{
+        echo "<script>";
+        echo "alert('Something went Wrong. Please Contact us for support. Thank You!')";
+        echo "</script>";
+    }
 }
 
 include("footer.php")

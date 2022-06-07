@@ -40,7 +40,13 @@ $mysqli_db->query($querry_create_table_product);
 function insert_into_user($first_name, $last_name, $email_address, $physical_address, $member_type, $user_location, $user_password){
     global $mysqli_db;
     $query_insert_into_user = "INSERT INTO `user` (`first_name`, `last_name`, `email_address`, `physical_address`, `member_type`, `user_location`, `user_password`) VALUES ('$first_name', '$last_name', '$email_address', '$physical_address', '$member_type', '$user_location', '$user_password')";
-    $mysqli_db->query($query_insert_into_user);
+    $result = $mysqli_db->query($query_insert_into_user);
+    if($result){
+        return 1;
+    }
+    else{
+        return 0;
+    }
 }
 
 //function to insert data into the product table
