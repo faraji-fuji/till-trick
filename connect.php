@@ -6,10 +6,10 @@ $db_password = "";
 $db_name = "cashcrop";
 
 // create the database
-// $mysqli = new mysqli($db_hostname, $db_username, $db_password);
-// $mysqli->query("CREATE DATABASE cashcrop");
+$mysqli = new mysqli($db_hostname, $db_username, $db_password);
+$mysqli->query("CREATE DATABASE cashcrop");
 
-//mysql querry to create the user table
+//mysql query to create the user table
 $querry_create_table_user = "CREATE TABLE user(
     first_name VARCHAR(50),
     last_name VARCHAR(50),
@@ -20,12 +20,13 @@ $querry_create_table_user = "CREATE TABLE user(
     user_password VARCHAR(50)
 )";
 
-//mysql querry to create the product table
+//mysql query to create the product table
 $querry_create_table_product = "CREATE TABLE product(
-    prod_name VARCHAR(50),
-    prod_quantity VARCHAR(50),
-    prod_type VARCHAR(50),
-    prod_img_path VARCHAR(100)
+    product_name VARCHAR(50),
+    product_unit VARCHAR(50),
+    product_price VARCHAR(50),
+    product_type VARCHAR(50),
+    product_image VARCHAR(100)
 )";
 
 //create database instance
@@ -42,4 +43,9 @@ function insert_into_user($first_name, $last_name, $email_address, $physical_add
     $mysqli_db->query($query_insert_into_user);
 }
 
-//function to insert data into the user table
+//function to insert data into the product table
+function insert_into_product($product_name,  $product_unit, $product_price, $product_type, $product_image){
+    global $mysqli_db, $query_insert_into_product;
+    $query_insert_into_table = "INSERT INTO `product` (`product_name`, `product_unit`, `product_price`, `product_type`, `product_image`) VALUES ('$product_name', '$product_unit', '$product_price', '$product_type', '$product_image')";
+    $mysqli_db->query($query_insert_into_product);
+}
