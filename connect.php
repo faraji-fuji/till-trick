@@ -49,3 +49,14 @@ function insert_into_product($product_name,  $product_unit, $product_price, $pro
     $query_insert_into_table = "INSERT INTO `product` (`product_name`, `product_unit`, `product_price`, `product_type`, `product_image`) VALUES ('$product_name', '$product_unit', '$product_price', '$product_type', '$product_image')";
     $mysqli_db->query($query_insert_into_product);
 }
+
+//function to authenticate users
+function authenticate_user($email_address, $user_password){
+    global $mysqli_db;
+    $result = $mysqli_db->query("SELECT * FROM `user` WHERE email_address = '$email_address'");
+    $row = $result->fetch_assoc();
+    if ($user_password == $row['user_password']){
+        return 1;
+    }
+    else return 0;
+}

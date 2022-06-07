@@ -38,9 +38,20 @@
     <?php
       if (isset($_POST['submit']))
       {
+          include("connect.php");
           $email_address = $_POST['email_address'];
           $user_password = $_POST['user_password'];
-
+          $authentication_status = authenticate_user($email_address, $user_password);
+          if($authentication_status){
+            echo "<script>";
+            echo "alert('Signed In Successfuly.')";
+            echo "</script>";
+          }
+          else {
+            echo "<script>";
+            echo "alert('Wrong Username or Password!')";
+            echo "</script>";
+          }
       // compare submitted credentials against credentials in  the database
       }
     ?>
