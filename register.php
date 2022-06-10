@@ -5,7 +5,7 @@ include("header_main.php")
 <div class="container shadow register-img">
     <div class="row">
         <div class="col col-a">
-            <img src="images\thomas-le-pRJhn4MbsMM-unsplash.jpg"  class="register-image" alt="" width="100">
+            <img src="images\thomas-le-pRJhn4MbsMM-unsplash.jpg"  class="register-image" alt="" width="400">
         </div>
         <div class="col">
             <form action="register.php" method="post">

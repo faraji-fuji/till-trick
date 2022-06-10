@@ -337,7 +337,7 @@ include("header_main.php");
 							<div class="thumb-wrapper">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
-									<img src="/examples/images/products/ipad.jpg" class="img-responsive" alt="">									
+									<img src="images\jonas-kakaroto-5JQH9Iqnm9o-unsplash.jpg" class="img-responsive" alt="">									
 								</div>
 								<div class="thumb-content">
 									<h4>Maize</h4>									

@@ -13,7 +13,7 @@
     
     <main class="form-signin shadow">
       <form method="post" action="login.php">
-        <img class="mb-4" src="images\cashcroplogo.png" alt="" width="120" height="120">
+        <img class="mb-4" src="images\cashcroplogo2.png" alt="" width="120" >
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div class="form-floating">
