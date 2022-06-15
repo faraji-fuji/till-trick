@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <footer class="row row-cols-5 py-5 my-5 border-top">
     <div class="col">
-      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+      <a href="#" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
         <img src="images\cashcroplogo2.png" width="250" alt="" class="header-logo">
       </a>
       <p class="text-muted text-center">&copy; 2022</p>

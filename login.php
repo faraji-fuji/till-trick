@@ -13,9 +13,8 @@
     
     <main class="form-signin shadow">
       <form method="post" action="login.php">
-        <img class="mb-4" src="images\cashcroplogo2.png" alt="" width="120" >
+        <a href="index.php"><img class="mb-4" src="images\cashcroplogo2.png" alt="" width="120" ></a>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
         <div class="form-floating">
           <input type="email" name="email_address" class="form-control" id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">Email address</label>
@@ -34,10 +33,9 @@
         <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
       </form>
     </main>
-
     <?php
-      if (isset($_POST['submit']))
-      {
+
+      if (isset($_POST['submit'])){
           include("connect.php");
           $email_address = $_POST['email_address'];
           $user_password = $_POST['user_password'];
@@ -46,13 +44,13 @@
             echo "<script>";
             echo "alert('Signed In Successfuly.')";
             echo "</script>";
+            redirect($email_address);
           }
           else {
             echo "<script>";
             echo "alert('Wrong Username or Password!')";
             echo "</script>";
           }
-      // compare submitted credentials against credentials in  the database
       }
     ?>
   </body>
