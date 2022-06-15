@@ -47,7 +47,24 @@ include("header_main.php");
         
     </div>
 </div>
-
+<div></div>
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="images\tom-brunberg-D4ZtZX1UeAI-unsplash.jpg" class="d-block mx-lg-auto img-fluid shadow-lg rounded" alt="Happy farmer" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Ready Market for Your Products!</h1>
+        <p class="lead">Are you a farmer? Dou you have products you would like to sell? Well, You have Come to the right place. Register as a Farmer and sell your product now!</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <!-- <button type="button" class="btn btn-success btn-lg px-4 me-md-2">Primary</button> -->
+          <a href="register.php">
+             <button type="button" class="btn btn-outline-success btn-lg px-4">Register Now!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 <?php
 include("footer.php");
 ?>
