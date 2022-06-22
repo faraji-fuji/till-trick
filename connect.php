@@ -91,12 +91,12 @@ function redirect($email_address){
         $mb_type = $row['member_type'];
         if ($mb_type == "Farmer"){
             echo "<script>";
-            echo "location.assign('header_farmer.php')";
+            echo "location.assign('index_farmer.php')";
             echo "</script>";
         }
         elseif ($mb_type == "Retailer"){
             echo "<script>";
-            echo "location.assign('header_retailer.php')";
+            echo "location.assign('index_retailer.php')";
             echo "</script>";
         }
         else{

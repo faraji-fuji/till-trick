@@ -27,11 +27,8 @@
           </ul>
 
           <div class="col-md-3 text-end">
-            <a href="login.php">
-              <button type="button" class="btn btn-outline-light me-2">Login</button>
-            </a>
-            <a href="register.php">
-              <button type="button" class="btn btn-outline-light">Sign-up</button>
+            <a href="logout.php">
+              <button type="button" class="btn btn-outline-light me-2">Logout</button>
             </a>
           </div>
         </header>
