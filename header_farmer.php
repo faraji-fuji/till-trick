@@ -1,20 +1,9 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>CashCrop</title>
-    <link rel="stylesheet" href="css\register.css">
-    <link rel="stylesheet" href="css\index.css">
-  </head>
-  <body>
+<?php
+include("head.php");
+?>
     <header class="sticky-top bg-success bg-gradient shadow">
       <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1">
           <a href="index_farmer.php" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
             <img src="images\cashcroplogo2.png" width="100" alt="" class="header-logo">
           </a>

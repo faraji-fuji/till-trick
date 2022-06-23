@@ -7,11 +7,12 @@
     
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css\login.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="text-center">
+  <body class="text-center bg-white">
     
-    <main class="form-signin shadow">
+    <main class="form-signin shadow bg-light">
       <form method="post" action="login.php">
         <a href="index.php"><img class="mb-4" src="images\cashcroplogo2.png" alt="" width="120" ></a>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>

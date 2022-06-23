@@ -32,7 +32,7 @@ include("header_main.php");
 				<div class="item active">
 					<div class="row">
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/ipad.jpg" class="img-responsive" alt="">									
@@ -54,7 +54,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/headphone.jpg" class="img-responsive" alt="">
@@ -76,7 +76,7 @@ include("header_main.php");
 							</div>
 						</div>		
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/macbook-air.jpg" class="img-responsive" alt="">
@@ -98,7 +98,7 @@ include("header_main.php");
 							</div>
 						</div>								
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/nikon.jpg" class="img-responsive" alt="">
@@ -124,7 +124,7 @@ include("header_main.php");
 				<div class="item">
 					<div class="row">
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/play-station.jpg" class="img-responsive" alt="">
@@ -146,7 +146,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/macbook-pro.jpg" class="img-responsive" alt="">
@@ -168,7 +168,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/speaker.jpg" class="img-responsive" alt="">
@@ -190,7 +190,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/galaxy.jpg" class="img-responsive" alt="">
@@ -216,7 +216,7 @@ include("header_main.php");
 				<div class="item">
 					<div class="row">
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/iphone.jpg" class="img-responsive" alt="">
@@ -238,7 +238,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/canon.jpg" class="img-responsive" alt="">
@@ -260,7 +260,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/pixel.jpg" class="img-responsive" alt="">
@@ -282,7 +282,7 @@ include("header_main.php");
 							</div>
 						</div>	
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/watch.jpg" class="img-responsive" alt="">
@@ -334,7 +334,7 @@ include("header_main.php");
 				<div class="item active">
 					<div class="row">
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="images\jonas-kakaroto-5JQH9Iqnm9o-unsplash.jpg" class="img-responsive" alt="">									
@@ -356,7 +356,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/headphone.jpg" class="img-responsive" alt="">
@@ -378,7 +378,7 @@ include("header_main.php");
 							</div>
 						</div>		
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/macbook-air.jpg" class="img-responsive" alt="">
@@ -400,7 +400,7 @@ include("header_main.php");
 							</div>
 						</div>								
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/nikon.jpg" class="img-responsive" alt="">
@@ -426,7 +426,7 @@ include("header_main.php");
 				<div class="item">
 					<div class="row">
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/play-station.jpg" class="img-responsive" alt="">
@@ -448,7 +448,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/macbook-pro.jpg" class="img-responsive" alt="">
@@ -470,7 +470,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/speaker.jpg" class="img-responsive" alt="">
@@ -492,7 +492,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/galaxy.jpg" class="img-responsive" alt="">
@@ -518,7 +518,7 @@ include("header_main.php");
 				<div class="item">
 					<div class="row">
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/iphone.jpg" class="img-responsive" alt="">
@@ -540,7 +540,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/canon.jpg" class="img-responsive" alt="">
@@ -562,7 +562,7 @@ include("header_main.php");
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/pixel.jpg" class="img-responsive" alt="">
@@ -584,7 +584,7 @@ include("header_main.php");
 							</div>
 						</div>	
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
+							<div class="thumb-wrapper bg-light">
 								<span class="wish-icon"><i class="fa fa-heart-o"></i></span>
 								<div class="img-box">
 									<img src="/examples/images/products/watch.jpg" class="img-responsive" alt="">

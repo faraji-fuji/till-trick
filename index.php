@@ -1,53 +1,57 @@
 <?php
 include("header_main.php");
 ?>
-
-<div class="container-fluid text-left shadow-sm">
-    <div class="row justify-content-evenly">
-        <div class="col-10">
-            <div id="carouselExampleCaptions" class="carousel slide shadow mb-5 bg-body rounded" data-bs-ride="false">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images\nrd-D6Tu_L3chLE-unsplash.jpg" class="d-block w-100 rounded-top" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Fresh!</h5>
-                            <p>Get fresh produce directly from the farm!.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images\ja-ma--gOUx23DNks-unsplash.jpg" class="d-block w-100 rounded-top" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Fruits and Spices!</h5>
-                            <p>Fresh fruits and spices are available!</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images\jakub-kapusnak-Hj53USePB1E-unsplash.jpg" class="d-block w-100 rounded-top" alt="...">
-                        <div class="carousel-caption d-none d-md-block ">
-                            <h5>Animal Products</h5>
-                            <p>Get animal Products at an affordable price</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-        
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-</div>
-<div></div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images\nrd-D6Tu_L3chLE-unsplash.jpg" class="d-block w-100 " alt="...">
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Fresh!</h1>
+            <p>Get fresh produce directly from the farm!.</p>
+            <p><a class="btn btn-lg btn-outline-light" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+      <img src="images\ja-ma--gOUx23DNks-unsplash.jpg" class="d-block w-100 " alt="...">
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Fruits and Spices!</h1>
+            <p>Fresh fruits and spices are available!</p>
+            <p><a class="btn btn-lg btn-outline-light" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+      <img src="images\artem-beliaikin-Mpm69Pad_-8-unsplash.jpg" class="d-block w-100" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Animal Products</h1>
+            <p>Get animal Products at an affordable price</p>
+            <p><a class="btn btn-lg btn-outline-light" href="#">Browse products</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
 <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
@@ -67,7 +71,7 @@ include("header_main.php");
   </div>
 
 
-  <div class="container my-5">
+  <div class="container my-5 bg-light">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
       <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
         <h1 class="display-4 fw-bold lh-1">Are You A Retailer?</h1>
