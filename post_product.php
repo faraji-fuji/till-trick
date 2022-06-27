@@ -21,12 +21,13 @@ include("header_farmer.php")
                 </div>
                 <div class="col-md-4">
                     <label for="inputState1" class="form-label">Product Type</label>
-                    <select id="inputState1" name="product_type"class="form-select">
+                    <select id="inputState1" name="product_type" class="form-select">
                         <option selected>Choose...</option>
                         <option>Vegetable</option>
                         <option>Fruit</option>
                         <option>Cereal</option>
                         <option>Spice</option>
+                        <option>Animal Product</option>
                     </select>
                 </div>
                 <label for="inputGroupFile02" class="form-label my-2">Product Image</label>
@@ -46,7 +47,7 @@ include("header_farmer.php")
 <?php
 include('connect.php');
 
-if(isset($_POST['post'])){
+if (isset($_POST['post'])) {
     // store user input in variables and store them in a database
     $product_name = $_POST['product_name'];
     $product_unit = $_POST['product_unit'];
@@ -55,13 +56,13 @@ if(isset($_POST['post'])){
     $product_image = $_FILES['userfile']['name'];
     insert_into_product($product_name, $product_unit, $product_price, $product_type, $product_image);
 
-    $destination = $uploads_dir.$_FILES['userfile']['name'];
+    $uploads_dir = "uploads/";
+    $destination = $uploads_dir . $_FILES['userfile']['name'];
     $status = move_uploaded_file($_FILES['userfile']['tmp_name'], $destination);
-    if ($status){
-        echo "file uploaded succesfuly";
-    }
-    else{
-        echo "file was not uploaded";
+    if ($status) {
+        // echo "file uploaded succesfuly";
+    } else {
+        // echo "file was not uploaded";
     }
 }
 include("footer.php")

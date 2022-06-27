@@ -6,16 +6,18 @@ $db_password = "";
 $db_name = "cashcrop";
 
 // function to create the database, returns 1 on success
-function initialize_db($db_hostname, $db_username, $db_password){
+function initialize_db($db_hostname, $db_username, $db_password)
+{
     $mysqli = new mysqli($db_hostname, $db_username, $db_password);
     $result = $mysqli->query("CREATE DATABASE cashcrop");
-    if ($result){
+    if ($result) {
         return 1;
-    }
-    else {
+    } else {
         return 0;
     }
 }
+initialize_db($db_hostname, $db_username, $db_password);
+
 
 //mysql query to create the user table
 $querry_create_table_user = "CREATE TABLE user(
@@ -34,7 +36,8 @@ $querry_create_table_product = "CREATE TABLE product(
     product_unit VARCHAR(50),
     product_price VARCHAR(50),
     product_type VARCHAR(50),
-    product_image VARCHAR(100)
+    product_image VARCHAR(100),
+    product_id INT AUTO_INCREMENT PRIMARY KEY
 )";
 
 //create database instance
@@ -45,68 +48,81 @@ $mysqli_db->query($querry_create_table_user);
 $mysqli_db->query($querry_create_table_product);
 
 //function to insert data into the user table
-function insert_into_user($first_name, $last_name, $email_address, $physical_address, $member_type, $user_location, $user_password){
+function insert_into_user($first_name, $last_name, $email_address, $physical_address, $member_type, $user_location, $user_password)
+{
     global $mysqli_db;
     $query_insert_into_user = "INSERT INTO `user` (`first_name`, `last_name`, `email_address`, `physical_address`, `member_type`, `user_location`, `user_password`) VALUES ('$first_name', '$last_name', '$email_address', '$physical_address', '$member_type', '$user_location', '$user_password')";
     $result = $mysqli_db->query($query_insert_into_user);
-    if($result){
+    if ($result) {
         return 1;
-    }
-    else{
+    } else {
         return 0;
     }
 }
 
 //function to insert data into the product table
-function insert_into_product($product_name,  $product_unit, $product_price, $product_type, $product_image){
+function insert_into_product($product_name,  $product_unit, $product_price, $product_type, $product_image)
+{
     global $mysqli_db;
     $query_insert_into_table = "INSERT INTO `product` (`product_name`, `product_unit`, `product_price`, `product_type`, `product_image`) VALUES ('$product_name', '$product_unit', '$product_price', '$product_type', '$product_image')";
-    echo $query_insert_into_table;
+    // echo $query_insert_into_table;
     $result = $mysqli_db->query($query_insert_into_table);
-    if ($result){
+    if ($result) {
         return 1;
-    }
-    else{
+    } else {
         return 0;
     }
 }
 
 //function to authenticate users
-function authenticate_user($email_address, $user_password){
+function authenticate_user($email_address, $user_password)
+{
     global $mysqli_db;
     $result = $mysqli_db->query("SELECT * FROM `user` WHERE email_address = '$email_address'");
     $row = $result->fetch_assoc();
-    if ($user_password == $row['user_password']){
+    if ($user_password == $row['user_password']) {
         return 1;
-    }
-    else return 0;
+    } else return 0;
 }
 
 //function to redirect signed in user to the appropriate page
-function redirect($email_address){
+function redirect($email_address)
+{
     global $mysqli_db;
     $result = $mysqli_db->query("SELECT * FROM `user` WHERE `email_address` = '$email_address'");
-    if ($result){
+    if ($result) {
         $row = $result->fetch_assoc();
         $mb_type = $row['member_type'];
-        if ($mb_type == "Farmer"){
+        if ($mb_type == "Farmer") {
             echo "<script>";
             echo "location.assign('index_farmer.php')";
             echo "</script>";
-        }
-        elseif ($mb_type == "Retailer"){
+        } elseif ($mb_type == "Retailer") {
             echo "<script>";
             echo "location.assign('index_retailer.php')";
             echo "</script>";
-        }
-        else{
+        } else {
             echo "<script>";
             echo "location.assign('header_customer.php')";
             echo "</script>";
         }
         return 1;
-    }
-    else{
+    } else {
         return 0;
     }
 }
+
+
+function get_products()
+{
+    global $mysqli_db;
+    $all_products = $mysqli_db->query("SELECT * FROM `product`");
+
+    if ($all_products) {
+        return $all_products;
+    } else {
+        return 0;
+    }
+}
+
+get_products();
