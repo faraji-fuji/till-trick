@@ -1,5 +1,5 @@
 <?php
-include("head.php");
+include("../head.php");
 ?>
 <header class="sticky-top bg-success bg-gradient shadow">
   <div class="container">

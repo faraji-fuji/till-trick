@@ -1,11 +1,11 @@
 <?php
-include("header_main.php")
+include("header/header_main.php")
 ?>
 
 <div class="container bg-light shadow register-img">
     <div class="row">
         <div class="col-4 col-a">
-            <img src="images\thomas-le-pRJhn4MbsMM-unsplash.jpg"  class=" img-fluid" alt="" width="">
+            <img src="images\thomas-le-pRJhn4MbsMM-unsplash.jpg" class=" img-fluid" alt="" width="">
         </div>
         <div class="col">
             <form action="register.php" method="post">
@@ -65,7 +65,7 @@ include("header_main.php")
 <?php
 include("connect.php");
 
-if(isset($_POST["register"])){
+if (isset($_POST["register"])) {
     //please sanitize user input
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
@@ -77,14 +77,13 @@ if(isset($_POST["register"])){
 
     //save user data
     $insert_status = insert_into_user($first_name, $last_name, $email_address, $physical_address, $member_type, $user_location, $user_password);
-    
+
     // success message
-    if ($insert_status){
+    if ($insert_status) {
         echo "<script>";
         echo "alert('Registered Successfuly. Please proceed to login')";
         echo "</script>";
-    }
-    else{
+    } else {
         echo "<script>";
         echo "alert('Something went Wrong. Please Contact us for support. Thank You!')";
         echo "</script>";

@@ -1,16 +1,22 @@
 <?php echo "<div id='carouselExampleDark$c_id' class='carousel carousel-dark slide' data-bs-ride='carousel'>"; ?>
 <div class="carousel-inner ">
     <div class="container">
+        <!-- main  product row  -->
         <div class="carousel-item active container" data-bs-interval="10000">
             <div class="row">
                 <?php
+                $no_of_cards = 
                 for ($i = 1; $i <= 4; $i++) {
                     include("productcard.php");
                 }
                 ?>
             </div>
         </div>
+
+        <!-- subsequent rows -->
         <?php
+
+        // if products are more than 4, create more rows
         for ($j = 1; $j <= 2; $j++) {
             include("productrow.php");
         }
