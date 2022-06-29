@@ -8,6 +8,7 @@
                 $product_name = $name_array[$item_index];
                 $product_unit = $unit_array[$item_index];
                 $product_price = $price_array[$item_index];
+                $product_image = $image_array[$item_index];
                 include("productcard.php");
                 $item_index++;
             }
@@ -17,6 +18,7 @@
                 $product_name = $name_array[$item_index];
                 $product_unit = $unit_array[$item_index];
                 $product_price = $price_array[$item_index];
+                $product_image = $image_array[$item_index];
                 include("productcard.php");
                 $item_index++;
             }

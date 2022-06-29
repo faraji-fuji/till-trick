@@ -1,6 +1,10 @@
 <div class='col'>
     <div class='card bg-light shadow m-2' style='width: 14rem;'>
-        <img src='images\cashcroplogo.png' class='card-img-top' alt='...'>
+
+        <?php
+        $uploads_folder = '..\uploads\\';
+        echo "<img src='$uploads_folder$product_image' class='card-img-top' alt='...'>"
+        ?>
         <div class='card-body'>
 
             <?php

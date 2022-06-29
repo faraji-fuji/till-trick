@@ -15,6 +15,7 @@
                     $name_array[$d] = $product_item['product_name'];
                     $price_array[$d] = $product_item['product_price'];
                     $unit_array[$d] = $product_item['product_unit'];
+                    $image_array[$d] = $product_item['product_image'];
                     $d++;
                 }
 
@@ -27,6 +28,7 @@
                         $product_name = $name_array[$item_index];
                         $product_unit = $unit_array[$item_index];
                         $product_price = $price_array[$item_index];
+                        $product_image = $image_array[$item_index];
                         include("productcard.php");
                         $item_index++;
                     }
@@ -36,6 +38,7 @@
                         $product_name = $name_array[$item_index];
                         $product_unit = $unit_array[$item_index];
                         $product_price = $price_array[$item_index];
+                        $product_image = $image_array[$item_index];
                         include("productcard.php");
                         $item_index++;
                     }
