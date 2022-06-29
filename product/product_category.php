@@ -1,6 +1,7 @@
 <?php
 include('../header/header_retailer.php');
 include("../connect.php");
+include("../functions.php");
 
 $product_type = $mysqli_db->query("SELECT DISTINCT `product_type` FROM product");
 
