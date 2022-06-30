@@ -11,11 +11,12 @@
                 $result = $mysqli_db->query($query);
                 $d = 0;
                 foreach ($result as $product_item) {
-                    $product_name =  $product_item['product_name'] . " ";
+                    $product_name =  $product_item['product_name'];
                     $name_array[$d] = $product_item['product_name'];
                     $price_array[$d] = $product_item['product_price'];
                     $unit_array[$d] = $product_item['product_unit'];
                     $image_array[$d] = $product_item['product_image'];
+                    $id_array[$d] = $product_item['product_id'];
                     $d++;
                 }
 
@@ -29,6 +30,7 @@
                         $product_unit = $unit_array[$item_index];
                         $product_price = $price_array[$item_index];
                         $product_image = $image_array[$item_index];
+                        $product_id = $id_array[$item_index];
                         include("productcard.php");
                         $item_index++;
                     }
@@ -39,6 +41,7 @@
                         $product_unit = $unit_array[$item_index];
                         $product_price = $price_array[$item_index];
                         $product_image = $image_array[$item_index];
+                        $product_id = $id_array[$item_index];
                         include("productcard.php");
                         $item_index++;
                     }

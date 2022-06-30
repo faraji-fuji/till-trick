@@ -11,7 +11,9 @@
             echo "<h5 class='card-title'>$product_name</h5>";
             echo "<p class='card-text'>$product_price per $product_unit</p>";
             ?>
-            <a href='#' class='btn btn-outline-success'>Add to Cart</a>
+
+            <!-- <a href='../cart.php?product_id=<?= $product_id ?>' class='btn btn-outline-success'>Add to Cart</a> -->
+            <a href='product_details.php?product_id=<?= $product_id ?>' class='btn btn-outline-success'>View Product</a>
         </div>
     </div>
 </div>
