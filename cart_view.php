@@ -51,4 +51,9 @@ $keys = array_keys($cart);
 </div>
 <?php
 
+if (isset($_POST['remove'])) {
+    include("cart_remove.php");
+    header("Refresh:0");
+}
+
 include("footer.php");

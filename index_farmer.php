@@ -1,9 +1,11 @@
 <?php
 include("header_farmer.php");
+session_start();
 ?>
 
 <div class="px-4 pt-5 my-5 text-center border-bottom">
-  <h1 class="display-4 fw-bold">Ready Market for Your Products!</h1>
+  <h1 class="display-4 fw-bold">Welcome <?= $_SESSION['user_name'] ?></h1>
+  <h2 class="display-4 fw-bold">Ready Market for Your Products!</h2>
   <div class="col-lg-6 mx-auto">
     <p class="lead mb-4">Are you a farmer? Dou you have products you would like to sell? Well, You have Come to the right place.</p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">

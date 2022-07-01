@@ -13,7 +13,7 @@ include("header_farmer.php")
                 <label for="name" class="form-label">Pricing</label>
                 <div class="row">
                     <div class="col">
-                        <input type="text" name="product_unit" class="form-control" placeholder="Unit, e.g Kilogram, Litre" aria-label="Unit">
+                        <input type="text" name="product_unit" class="form-control" placeholder="Unit, e.g KG, L, Sack" aria-label="Unit">
                     </div>
                     <div class="col">
                         <input type="text" name="product_price" class="form-control" placeholder="Price" aria-label="Price">

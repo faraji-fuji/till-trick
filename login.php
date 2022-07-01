@@ -43,9 +43,8 @@
     $user_password = $_POST['user_password'];
     $authentication_status = authenticate_user($email_address, $user_password);
     if ($authentication_status) {
-      echo "<script>";
-      echo "alert('Signed In Successfuly.')";
-      echo "</script>";
+      session_start();
+      $_SESSION['user_name'] = fetch_last_name($email_address);
       redirect($email_address);
     } else {
       echo "<script>";

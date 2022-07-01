@@ -1,4 +1,5 @@
 <?php
+//this file interacts with the database
 //store access credentials in variables
 $db_hostname = "localhost";
 $db_username = "root";
@@ -81,6 +82,7 @@ function authenticate_user($email_address, $user_password)
     $result = $mysqli_db->query("SELECT * FROM `user` WHERE email_address = '$email_address'");
     $row = $result->fetch_assoc();
     if ($user_password == $row['user_password']) {
+        $_SESSION['user_name'] = $row['last_name'];
         return 1;
     } else return 0;
 }
@@ -125,4 +127,11 @@ function get_products()
     }
 }
 
-get_products();
+// fetch lastname given email address
+function fetch_last_name($email_address)
+{
+    global $mysqli_db;
+    $result = $mysqli_db->query("SELECT last_name FROM user WHERE email_address = '$email_address'");
+    $row = $result->fetch_assoc();
+    return $row['last_name'];
+}

@@ -1,5 +1,5 @@
 <?php
-$uploads = "../uploads/";
+$uploads = "uploads/";
 ?>
 
 <div class="container-fluid mt-4">

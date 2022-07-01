@@ -5,7 +5,8 @@
     </div>
     <span class="text-muted"><?= $product_quantity . " " . $product_unit ?> </span>
     <span class="text-muted"><?= $product_price * $product_quantity ?></span>
-    <form action="#" method="POST">
+    <form action="cart_view?product_id=<?= $product_id = $key ?>" method="POST">
         <button type="submit" name="remove" class="btn btn-secondary">Remove</button>
     </form>
 </li>
+<?php

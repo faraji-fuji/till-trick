@@ -14,4 +14,4 @@ foreach ($product_type as $category) {
     include("productcrsl.php");
     $c_id += 1;
 }
-include("../footer.php");
+include("footer.php");
