@@ -16,7 +16,7 @@ $uploads = "../uploads/";
                             <p class="card-text"><?= $product_price ?></p>
                             <form action="#" method="POST">
                                 <div class="input-group flex-nowrap">
-                                    <span class="input-group-text" id="addon-wrapping">Quantity</span>
+                                    <span class="input-group-text" value=1 id="addon-wrapping">Quantity</span>
                                     <input type="number" name="quantity" class="form-control" placeholder="Quantity in <?= $product_unit ?>" aria-label="Username" aria-describedby="addon-wrapping">
                                 </div>
                                 <button type="submit" name="submit" class="btn btn-outline-success mt-2">Add To Cart</button>
