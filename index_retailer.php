@@ -1,5 +1,5 @@
 <?php
-include("header/header_retailer.php");
+include("header_retailer.php");
 ?>
 
 <div class="px-4 pt-5 my-5 text-center border-bottom">

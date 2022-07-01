@@ -33,5 +33,5 @@ $uploads = "../uploads/";
 
 if (isset($_POST['submit'])) {
     $quantity = $_POST['quantity'];
-    include("../add_to_cart.php");
+    include("cart_add.php");
 }

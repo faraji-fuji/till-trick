@@ -1,5 +1,5 @@
 <?php
-include("header/header_main.php")
+include("header_main.php")
 ?>
 
 <div class="container bg-light shadow register-img">

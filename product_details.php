@@ -2,8 +2,8 @@
 
 $product_id = $_GET['product_id'];
 // echo $product_id;
-include("../header/header_retailer.php");
-include("../connect.php");
+include("header_retailer.php");
+include("connect.php");
 
 //function to fetch the product details given the product id.
 function fetch_product_details($product_id)
@@ -19,4 +19,4 @@ function fetch_product_details($product_id)
 }
 
 fetch_product_details($product_id);
-include("../footer.php");
+include("footer.php");

@@ -1,6 +1,7 @@
 <?php
-include("header\header_main.php");
+include("header_main.php");
 ?>
+
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
