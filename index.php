@@ -7,11 +7,13 @@ include("header_main.php");
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
   </div>
+
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="images\nrd-D6Tu_L3chLE-unsplash.jpg" class="d-block w-100 " alt="...">
-
+      <img src="images\nrd-D6Tu_L3chLE-unsplash.jpg" class="d-block w-100" alt="...">
       <div class="container">
         <div class="carousel-caption text-start">
           <h1>Fresh!</h1>
@@ -19,9 +21,9 @@ include("header_main.php");
         </div>
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="images\ja-ma--gOUx23DNks-unsplash.jpg" class="d-block w-100 " alt="...">
 
+    <div class="carousel-item">
+      <img src="images\gemma-stpjHJGqZyw-unsplash.jpg" class="d-block w-100 " alt="...">
       <div class="container">
         <div class="carousel-caption">
           <h1>Fruits and Spices!</h1>
@@ -29,9 +31,19 @@ include("header_main.php");
         </div>
       </div>
     </div>
+
+    <div class="carousel-item">
+      <img src="images\tengyart-auEPahZjT40-unsplash.jpg" class="d-block w-100 " alt="...">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Mayai</h1>
+          <p>Get eggs supply at an affordable price</p>
+        </div>
+      </div>
+    </div>
+
     <div class="carousel-item">
       <img src="images\artem-beliaikin-Mpm69Pad_-8-unsplash.jpg" class="d-block w-100" alt="...">
-
       <div class="container">
         <div class="carousel-caption text-end">
           <h1>Animal Products</h1>
@@ -40,6 +52,7 @@ include("header_main.php");
       </div>
     </div>
   </div>
+
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
