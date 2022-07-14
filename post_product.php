@@ -22,22 +22,22 @@ include("navbar.php");
                     <form enctype="multipart/form-data" action="post_product.php" method="POST">
                         <!-- Product Name -->
                         <div class="form-outline mb-4">
-                            <input type="text" name="product_name" id="form4Example1" class="form-control" />
-                            <label class="form-label" for="form4Example1">Product Name</label>
+                            <input type="text" name="product_name" id="validationDefault09" class="form-control" required />
+                            <label class="form-label" for="validationDefault09">Product Name</label>
                         </div>
 
                         <!-- Available Stock -->
                         <div class="form-outline mb-4">
-                            <input type="number" name="available_stock" id="available_stock_post_product" class="form-control" />
-                            <label class="form-label" for="available_stock_post_product">Available Stock</label>
+                            <input type="number" name="available_stock" id="validationDefault10" class="form-control" required />
+                            <label class="form-label" for="validationDefault10">Available Stock</label>
                         </div>
 
                         <!-- Pricing Input -->
                         <div class="row mb-4">
                             <div class="col">
                                 <div class="form-outline">
-                                    <input type="number" name="product_price" id="form3Example1" class="form-control" />
-                                    <label class="form-label" for="form3Example1">Pricing Per Unit</label>
+                                    <input type="number" name="product_price" id="validationDefault11" class="form-control" required />
+                                    <label class="form-label" for="validationDefault11">Pricing Per Unit</label>
                                 </div>
                             </div>
                             <div class="col">

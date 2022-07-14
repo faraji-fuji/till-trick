@@ -26,13 +26,13 @@
                           <form action="login.php" method="POST">
                               <!-- Email input -->
                               <div class="form-outline mb-4">
-                                  <input type="email" name="email_address" id="form3Example3" class="form-control" />
-                                  <label class="form-label" for="form3Example3">Email address</label>
+                                  <input type="email" name="email_address" id="validationDefault01" class="form-control" required />
+                                  <label class="form-label" for="validationDefault01">Email address</label>
                               </div>
                               <!-- Password input -->
                               <div class="form-outline mb-4">
-                                  <input type="password" name="user_password" id="form3Example4" class="form-control" />
-                                  <label class="form-label" for="form3Example4">Password</label>
+                                  <input type="password" name="user_password" id="validationDefault02" class="form-control" required />
+                                  <label class="form-label" for="validationDefault02">Password</label>
                               </div>
                               <!-- Submit button -->
                               <button type="submit" name="submit" class="btn btn-success btn-block mb-4">

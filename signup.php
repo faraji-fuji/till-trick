@@ -16,22 +16,22 @@
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
-                                    <input type="text" name="first_name" id="form3Example1" class="form-control" />
-                                    <label class="form-label" for="form3Example1">First name</label>
+                                    <input type="text" name="first_name" id="validationDefault03" class="form-control" required />
+                                    <label class="form-label" for="validationDefault03">First name</label>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
-                                    <input type="text" name="last_name" id="form3Example2" class="form-control" />
-                                    <label class="form-label" for="form3Example2">Last name</label>
+                                    <input type="text" name="last_name" id="validationDefault04" class="form-control" required />
+                                    <label class="form-label" for="validationDefault04">Last name</label>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" name="email_address" id="form3Example3" class="form-control" />
-                            <label class="form-label" for="form3Example3">Email address</label>
+                            <input type="email" name="email_address" id="validationDefault05" class="form-control" required />
+                            <label class="form-label" for="validationDefault05">Email address</label>
                         </div>
 
                         <!-- Member Type -->
@@ -59,14 +59,14 @@
 
                         <!-- Nearest Landmark -->
                         <div class="form-outline mb-4">
-                            <input type="text" name="physical_address" id="form3Example3" class="form-control" />
+                            <input type="text" name="physical_address" id="validationDefault03" class="form-control" />
                             <label class="form-label" for="form3Example3">Nearest Landmark</label>
                         </div>
 
                         <!-- Phone Number -->
                         <div class="form-outline mb-4">
-                            <input type="tel" name="phone_number" id="user_password_signup" placeholder="254" class="form-control" />
-                            <label class="form-label" for="user_password_signup">Phone Number</label>
+                            <input type="tel" name="phone_number" id="validationDefault06" placeholder="254" class="form-control" required />
+                            <label class="form-label" for="validationDefault06">Phone Number</label>
                         </div>
 
                         <!-- Profile Photo Input -->
@@ -79,13 +79,13 @@
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <input type="password" name="user_password" id="form3Example4" class="form-control" />
-                            <label class="form-label" for="form3Example4">Password</label>
+                            <input type="password" name="user_password" id="validationDefault07" class="form-control" required />
+                            <label class="form-label" for="validationDefault07">Password</label>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="password" id="form3Example5" class="form-control" />
-                            <label class="form-label" for="form3Example4">Repeat Password</label>
+                            <input type="password" id="validationDefault08" class="form-control" required />
+                            <label class="form-label" for="validationDefault08">Repeat Password</label>
                         </div>
 
 
