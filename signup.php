@@ -136,7 +136,7 @@ if (isset($_POST["register"])) {
         // echo "file was not uploaded";
     }
 
-    //save user data
+    // save user data
     $insert_status = insert_into_user(
         $first_name,
         $last_name,
@@ -149,14 +149,17 @@ if (isset($_POST["register"])) {
         $phone_number
     );
 
+    // create user cart 
+    insert_into_cart($email_address);
+
     // success message
     if ($insert_status) {
         echo "<script>";
         echo "alert('Registered Successfuly. Please proceed to login')";
         echo "</script>";
-        echo "<script>";
-        echo "location.assign('login.php')";
-        echo "</script>";
+        // echo "<script>";
+        // echo "location.assign('login.php')";
+        // echo "</script>";
     } else {
         echo "<script>";
         echo "alert('Something went Wrong. Please Contact us for support. Thank You!')";

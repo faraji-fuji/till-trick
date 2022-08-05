@@ -83,7 +83,20 @@ $query_create_table_forum = "CREATE TABLE forum(
     message_sender VARCHAR(50)
 )";
 
-// create database instance
+// cart
+$query_create_table_cart = "CREATE TABLE cart(
+    cart_id INT AUTO_INCREMENT PRIMARY KEY,
+    cart_owner VARCHAR(50)
+)";
+
+// cart_item
+$query_create_table_cart_item = "CREATE TABLE cart_item(
+    cart_item_id INT PRIMARY KEY,
+    cart_item_quantity INT,
+    cart_id INT
+)";
+
+// create a database instance
 $mysqli_db = new mysqli($db_hostname, $db_username, $db_password, $db_name);
 
 //create relevant tables
@@ -92,8 +105,9 @@ $mysqli_db->query($query_create_table_product);
 $mysqli_db->query($query_create_table_order);
 $mysqli_db->query($query_create_table_order_item);
 $mysqli_db->query($query_create_table_transactions);
-
 $mysqli_db->query($query_create_table_forum);
+$mysqli_db->query($query_create_table_cart);
+$mysqli_db->query($query_create_table_cart_item);
 
 //functions to insert data into the tables
 //return 1 on success, 0 on failure
@@ -274,6 +288,50 @@ function insert_into_forum(
     }
 }
 
+// cart
+function insert_into_cart(
+    $cart_owner
+) {
+    global $mysqli_db;
+    $sql = "INSERT INTO `cart` (
+        `cart_id`, 
+        `cart_owner`
+        ) VALUES (
+            NULL,
+            '$cart_owner'
+        )";
+    $result = $mysqli_db->query($sql);
+    if ($result) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+// cart_item
+function insert_into_cart_item(
+    $cart_item_id,
+    $cart_item_quantity,
+    $cart_id
+) {
+    global $mysqli_db;
+    $sql = "INSERT INTO `cart_item` (
+        `cart_item_id`,
+        `cart_item_quantity`,
+        `cart_id`
+    ) VALUES (
+        '$cart_item_id',
+        '$cart_item_quantity', 
+        '$cart_id'
+    )";
+    $result = $mysqli_db->query($sql);
+    if ($result) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 // functionalities
 // function to authenticate users
 function authenticate_user($email_address, $user_password)
@@ -291,6 +349,17 @@ function authenticate_user($email_address, $user_password)
 function login($email_address)
 {
     global $mysqli_db;
+
+    // fetch cart_id from cart table and store in session variable
+    $res = $mysqli_db->query("SELECT `cart_id` FROM `cart` WHERE `cart_owner` = '$email_address'");
+    if ($res) {
+        $row1 = $res->fetch_assoc();
+        $_SESSION['cart_id'] = $row1['cart_id'];
+    } else {
+        return 0;
+    }
+
+    // fetch data from user table and store it in session variables
     $result = $mysqli_db->query("SELECT * FROM `user` WHERE `email_address` = '$email_address'");
     if ($result) {
         //store results in an associative array, representing the row
