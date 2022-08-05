@@ -94,7 +94,18 @@
                         <div class="d-flex justify-content-center align-items-center h-100">
                             <div class="text-white text-center">
                                 <h2>Sell Your Agricultural Products on our Platform</h2>
-                                <a class="btn btn-outline-light btn-lg m-2" href="post_product.php" role="button">Post Your Product Here</a>
+                                <a class="btn btn-outline-light btn-lg m-2
+
+                                <?php
+                                //  Hide button if session variable is not set
+                                if ($_SESSION['login_status']) {
+                                } else {
+                                    echo "visually-hidden";
+                                }
+                                ?>
+                
+                                " href="post_product.php" role="button">Post Your Product Here
+                                </a>
                             </div>
                         </div>
                     </div>

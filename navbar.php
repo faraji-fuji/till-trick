@@ -32,7 +32,7 @@ if (isset($_SESSION['profile_photo'])) {
 
                 <li class="nav-item
                 <?php
-                //  Hide cart is session variable is not set
+                //  Hide cart if session variable is not set
                 if ($_SESSION['login_status']) {
                 } else {
                     echo "visually-hidden";
