@@ -91,7 +91,8 @@ $query_create_table_cart = "CREATE TABLE cart(
 
 // cart_item
 $query_create_table_cart_item = "CREATE TABLE cart_item(
-    cart_item_id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cart_item_id INT,
     cart_item_quantity INT,
     cart_id INT
 )";
@@ -316,15 +317,18 @@ function insert_into_cart_item(
 ) {
     global $mysqli_db;
     $sql = "INSERT INTO `cart_item` (
+        `id`,
         `cart_item_id`,
         `cart_item_quantity`,
         `cart_id`
     ) VALUES (
+        NULL,
         '$cart_item_id',
         '$cart_item_quantity', 
         '$cart_id'
     )";
     $result = $mysqli_db->query($sql);
+    echo $mysqli_db->error;
     if ($result) {
         return 1;
     } else {

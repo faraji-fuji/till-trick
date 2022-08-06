@@ -1,11 +1,24 @@
 <?php
-//include header file, connact file, classes file
+// include header file, connect file
 include("head.php");
 include("navbar.php");
 include("connect.php");
 
-//save the cart1 to a variable
-$cart = $_SESSION['cart1']->cart_array;
+// get cart id from session
+$cart_id = $_SESSION['cart_id'];
+
+// get cart from cart item table and store in an associative array
+$res = $mysqli_db->query("SELECT `cart_item_id`, `cart_item_quantity` FROM `cart_item` WHERE `cart_id` = '$cart_id'");
+$res1 = $res->fetch_assoc();
+if ($res1) {
+    foreach ($res as $row) {
+        // create an associative array from the fetched data
+        $cart[$row['cart_item_id']] = $row['cart_item_quantity'];
+    }
+} else {
+    // empty array if there is no data
+    $cart = [];
+}
 
 //get the keys from the cart array
 $keys = array_keys($cart);
@@ -124,7 +137,10 @@ $keys = array_keys($cart);
 <?php
 // handle remove from item
 if (isset($_POST['remove'])) {
-    include("cart_remove.php");
+
+    $product_id = $_GET['product_id'];
+    $mysqli_db->query("DELETE FROM `cart_item` WHERE `cart_item`.`cart_item_id` = '$product_id' AND `cart_item`.`cart_id` = '$cart_id'");
+    // include("cart_remove.php");
     echo "<script>";
     echo "location.assign('cart_view.php')";
     echo "</script>";
@@ -135,7 +151,7 @@ if (isset($_POST['checkout'])) {
     // save data 
     // into order table
 
-    // email address
+    // get email address from session
     $email_address = $_SESSION['email_address'];
 
     insert_into_orders($email_address, $subtotal, $shipping, $total);
@@ -172,9 +188,8 @@ if (isset($_POST['checkout'])) {
         echo "</script>";
 
         // clear the cart
-        foreach ($keys as $key) {
-            $_SESSION['cart1']->remove_from_cart($key);
-        }
+        $sql = "DELETE FROM `cart_item` WHERE `cart_id` = '$cart_id'";
+        $mysqli_db->query($sql);
     } else {
         echo "<script>";
         echo "alert('Something went wrong. Please contact Support.')";

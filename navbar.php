@@ -39,7 +39,7 @@ if (isset($_SESSION['profile_photo'])) {
                 }
                 ?>
                 ">
-                    <a class="nav-link" href="cart_view.php">Cart</a>
+                    <a class="nav-link" href="cart.php">Cart</a>
                 </li>
 
                 <li class="nav-item

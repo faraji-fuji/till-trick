@@ -1,6 +1,4 @@
-<?php
-$uploads = "assets/uploads/";
-?>
+<?php $uploads = "assets/uploads/"; ?>
 
 <div class="container-fluid mt-4">
     <div class="row justify-content-evenly">
@@ -31,7 +29,24 @@ $uploads = "assets/uploads/";
 
 <?php
 
+// handle adding and updating items in the cart
 if (isset($_POST['submit'])) {
     $quantity = $_POST['quantity'];
-    include("cart_add.php");
+
+    // get cart id from session
+    $cart_id = $_SESSION['cart_id'];
+
+    // fetch item, if it exists perfom an update, if it does not exist perfom an insert operation
+    $sql = "SELECT `id` FROM `cart_item` WHERE `cart_id` = '$cart_id' AND `cart_item_id` = '$product_id'";
+    $result = $mysqli_db->query($sql);
+    $row = $result->fetch_assoc();
+
+    if ($row) {
+        // update
+        $sql = "UPDATE `cart_item` SET `cart_item_quantity` = '$quantity' WHERE `cart_item`.`cart_id` = '$cart_id' AND `cart_item`.`cart_item_id` = '$product_id'";
+        $mysqli_db->query($sql);
+    } else {
+        // insert
+        insert_into_cart_item($product_id, $quantity, $cart_id);
+    }
 }

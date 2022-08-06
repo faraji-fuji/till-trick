@@ -37,6 +37,12 @@ $profile_photo = $_SESSION['profile_photo'];
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
 
                                 <p class="mb-0">
+                                    <a href="cart.php">MY CART</a>
+                                </p>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+
+                                <p class="mb-0">
                                     <a href="post_product.php">POST A PRODUCT</a>
                                 </p>
                             </li>
