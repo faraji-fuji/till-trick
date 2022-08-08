@@ -387,10 +387,17 @@ function login($email_address)
             $_SESSION['cart1'] = new cart();
         }
 
-        // redirect user to index page
-        echo "<script>";
-        echo "location.assign('index.php')";
-        echo "</script>";
+        if ($_SESSION['email_address'] == "admin@cashcrop.com") {
+            // redirect admin to dashboard
+            echo "<script>";
+            echo "location.assign('admin.php')";
+            echo "</script>";
+        } else {
+            // redirect user to index page
+            echo "<script>";
+            echo "location.assign('index.php')";
+            echo "</script>";
+        }
     } else {
         return 0;
     }

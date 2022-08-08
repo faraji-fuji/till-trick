@@ -1,5 +1,5 @@
 <div class="col-lg-3 col-md-12 mb-4">
-    <div class="card" style="width: 14rem;">
+    <div class="card" style="width: 100%;">
         <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
             <img src="assets/uploads/<?= $image ?>" class="w-100" />
             <a href="#!">

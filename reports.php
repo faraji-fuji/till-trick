@@ -66,6 +66,7 @@ $no_of_suppliers = $result6->num_rows;
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-4">
+
                 <div class="card mb-4">
                     <div class="card-body text-center">
                         <img src="assets/avatars/<?= $profile_photo ?>" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
@@ -73,9 +74,12 @@ $no_of_suppliers = $result6->num_rows;
                         <p class="text-muted mb-1">Admin</p>
                     </div>
                 </div>
+
                 <div class="card mb-4 mb-lg-0">
                     <div class="card-body p-0">
-                        <ul class="list-group list-group-flush rounded-3">
+
+                        <?php include("chart.php") ?>
+                        <!-- <ul class="list-group list-group-flush rounded-3">
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
 
                                 <p class="mb-0">QUICK LINKS</p>
@@ -92,7 +96,7 @@ $no_of_suppliers = $result6->num_rows;
                                     <a href="useful_links.php">USEFUL LINKS</a>
                                 </p>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@ if (isset($_SESSION['profile_photo'])) {
 ?>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark  bg-dark d-none d-lg-block sticky-top shadow" style="z-index: 2000;">
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark d-lg-block sticky-top shadow" style="z-index: 2000;">
     <div class="container-fluid">
         <!-- Navbar brand -->
         <a class="navbar-brand nav-link" href="index.php">
@@ -80,6 +80,9 @@ if (isset($_SESSION['profile_photo'])) {
                  
                  ">LOGIN</button>
             </a>
+
+
+
 
 
             <!-- avatar -->

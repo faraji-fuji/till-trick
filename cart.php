@@ -115,7 +115,7 @@ $keys = array_keys($cart);
                                         </div>
 
                                         <!-- Checkout form -->
-                                        <form action="cart_view.php" method="POST">
+                                        <form action="cart.php" method="POST">
                                             <button type="submit" name="checkout" class="btn btn-success btn-block btn-lg">
                                                 <div class="d-flex justify-content-between">
                                                     <span>KES <?= $total ?></span>
@@ -142,7 +142,7 @@ if (isset($_POST['remove'])) {
     $mysqli_db->query("DELETE FROM `cart_item` WHERE `cart_item`.`cart_item_id` = '$product_id' AND `cart_item`.`cart_id` = '$cart_id'");
     // include("cart_remove.php");
     echo "<script>";
-    echo "location.assign('cart_view.php')";
+    echo "location.assign('cart.php')";
     echo "</script>";
 }
 
