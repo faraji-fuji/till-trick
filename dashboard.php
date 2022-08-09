@@ -39,25 +39,8 @@ $row = $res->fetch_assoc();
 $top_seller_first_name = $row['first_name'];
 $top_seller_last_name = $row['last_name'];
 
-// Number of customers
-$sql = "SELECT email_address FROM user WHERE member_type= 'customer'";
-$res = $mysqli_db->query($sql);
-$no_of_customers = $res->num_rows;
 
-// Number of institutions
-$sql = "SELECT email_address FROM user WHERE member_type= 'institution'";
-$res = $mysqli_db->query($sql);
-$no_of_intitutions = $res->num_rows;
 
-// Number of retailers
-$sql = "SELECT email_address FROM user WHERE member_type= 'retailer'";
-$res = $mysqli_db->query($sql);
-$no_of_retailers = $res->num_rows;
-
-// Number of farmers
-$sql = "SELECT email_address FROM user WHERE member_type= 'farmer'";
-$res = $mysqli_db->query($sql);
-$no_of_farmers = $res->num_rows;
 ?>
 
 <!DOCTYPE html>
@@ -214,7 +197,7 @@ $no_of_farmers = $res->num_rows;
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Sales Overview</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">WEEKLY SALES OVERVIEW</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -272,7 +255,7 @@ $no_of_farmers = $res->num_rows;
                                             <i class="fas fa-circle text-info"></i> Retailers
                                         </span>
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> farmers
+                                            <i class="fas fa-circle text-warning"></i> farmers
                                         </span>
                                     </div>
                                 </div>
@@ -387,49 +370,10 @@ $no_of_farmers = $res->num_rows;
     <script src="js/demo/chart-area-demo.js"></script>
     <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
 
-
-    <script>
-        // Set new default font family and font color to mimic Bootstrap's default styling
-        Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
-        Chart.defaults.global.defaultFontColor = '#858796';
-
-        // Pie Chart Example
-        var ctx = document.getElementById("myPieChart");
-        var myPieChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Customers", "Institutions", "Retailers", "Farmers"],
-                datasets: [{
-                    data: [
-                        <?= $no_of_customers ?>,
-                        <?= $no_of_intitutions ?>,
-                        <?= $no_of_retailers ?>,
-                        <?= $no_of_farmers ?>
-                    ],
-                    backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-                    hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
-                    hoverBorderColor: "rgba(234, 236, 244, 1)",
-                }],
-            },
-            options: {
-                maintainAspectRatio: false,
-                tooltips: {
-                    backgroundColor: "rgb(255,255,255)",
-                    bodyFontColor: "#858796",
-                    borderColor: '#dddfeb',
-                    borderWidth: 1,
-                    xPadding: 15,
-                    yPadding: 15,
-                    displayColors: false,
-                    caretPadding: 10,
-                },
-                legend: {
-                    display: false
-                },
-                cutoutPercentage: 80,
-            },
-        });
-    </script>
+    <?php
+    include("charts/user_distribution.php");
+    include("charts/weekly_sales.php");
+    ?>
 
 </body>
 
