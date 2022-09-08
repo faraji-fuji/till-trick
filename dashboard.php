@@ -67,8 +67,11 @@ $top_seller_last_name = $row['last_name'];
 
 <body id="page-top">
 
+
     <!-- Page Wrapper -->
     <div id="wrapper">
+
+
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -270,7 +273,7 @@ $top_seller_last_name = $row['last_name'];
                         <div class="col-lg-6 mb-4">
 
                             <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                                 </div>
@@ -296,14 +299,14 @@ $top_seller_last_name = $row['last_name'];
                                         <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="col-lg-6 mb-4">
 
                             <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
+                            <!-- <div class="card shadow mb-4"> -->
+                            <!-- <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
                                 </div>
                                 <div class="card-body">
@@ -315,13 +318,13 @@ $top_seller_last_name = $row['last_name'];
                                         completely free and without attribution!</p>
                                     <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
                                         unDraw &rarr;</a>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div> -->
 
                             <!-- Approach -->
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4"> -->
 
-                                <!-- <div class="card-header py-3">
+                            <!-- <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
                                 </div>
                                 <div class="card-body">
@@ -331,7 +334,7 @@ $top_seller_last_name = $row['last_name'];
                                     <p class="mb-0">Before working with this theme, you should become familiar with the
                                         Bootstrap framework, especially the utility classes.</p>
                                 </div> -->
-                            </div>
+                            <!-- </div> -->
 
                         </div>
                     </div>
@@ -366,13 +369,9 @@ $top_seller_last_name = $row['last_name'];
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
 
     <?php
     include("charts/user_distribution.php");
-    include("charts/weekly_sales.php");
     ?>
 
 </body>

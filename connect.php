@@ -390,7 +390,7 @@ function login($email_address)
         if ($_SESSION['email_address'] == "admin@cashcrop.com") {
             // redirect admin to dashboard
             echo "<script>";
-            echo "location.assign('admin.php')";
+            echo "location.assign('dashboard/admin.php')";
             echo "</script>";
         } else {
             // redirect user to index page
