@@ -2,6 +2,20 @@
 if (isset($_SESSION['profile_photo'])) {
     $profile_photo = $_SESSION['profile_photo'];
 }
+
+// hide navbar components (cart, forum, avatar) depending on the login status
+if ($_SESSION['login_status']) {
+    $visibility = "";
+} else {
+    $visibility = "visually-hidden";
+}
+
+// hide login button if a user is loged in (login button)
+if ($_SESSION['login_status']) {
+    $inverted_visibility = "visually-hidden";
+} else {
+    $inverted_visibility = "";
+}
 ?>
 
 <!-- Navbar -->
@@ -15,6 +29,7 @@ if (isset($_SESSION['profile_photo'])) {
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarExample01">
+            <!-- left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item active">
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
@@ -25,77 +40,26 @@ if (isset($_SESSION['profile_photo'])) {
                 <li class="nav-item">
                     <a class="nav-link" href="about_us.php">About</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="#">Testimonials</a>
                 </li>
-
-                <li class="nav-item
-                <?php
-                //  Hide cart if session variable is not set
-                if ($_SESSION['login_status']) {
-                } else {
-                    echo "visually-hidden";
-                }
-                ?>
-                ">
+                <li class="nav-item <?= $visibility ?> ">
                     <a class="nav-link" href="cart.php">Cart</a>
                 </li>
-
-                <li class="nav-item
-                <?php
-                //  Hide cart is session variable is not set
-                if ($_SESSION['login_status']) {
-                } else {
-                    echo "visually-hidden";
-                }
-                ?>
-                ">
+                <li class="nav-item <?= $visibility ?>">
                     <a class="nav-link" href="forum.php">Forum</a>
                 </li>
-
-                <li class="nav-item
-                <?php
-                //  Hide cart is session variable is not set
-                if ($_SESSION['login_status'] && $_SESSION['email_address'] == "admin@cashcrop.com") {
-                } else {
-                    echo "visually-hidden";
-                }
-                ?>
-                ">
-                    <a class="nav-link" href="reports.php">Reports</a>
-                </li>
             </ul>
+            <!-- left links -->
 
             <!-- Login Button -->
             <a href="login.php">
-                <button type="button" class="btn btn-success 
-                 
-                <?php
-                // Hide login button if session variable is set
-                if ($_SESSION['login_status']) {
-                    echo "visually-hidden";
-                }
-                ?>
-                 
-                 ">LOGIN</button>
+                <button type="button" class="btn btn-success <?= $inverted_visibility ?>">LOGIN</button>
             </a>
-
-
-
-
+            <!-- Login Button -->
 
             <!-- avatar -->
-            <ul class="navbar-nav mx-5
-                <?php
-                //  Hide avatar is session variable is not set
-                if ($_SESSION['login_status']) {
-                } else {
-                    echo "visually-hidden";
-                }
-                ?>
-                ">
-                <!-- Avatar -->
+            <ul class="navbar-nav mx-5 <?= $visibility ?> ">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                         <img src="assets/avatars/<?= $profile_photo ?>" class="rounded-circle" height="22" alt="Avatar" loading="lazy" />
@@ -113,6 +77,8 @@ if (isset($_SESSION['profile_photo'])) {
                     </ul>
                 </li>
             </ul>
+            <!-- avatar -->
+
         </div>
     </div>
 </nav>
