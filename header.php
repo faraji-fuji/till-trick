@@ -40,7 +40,7 @@
                 .carousel-inner,
                 .carousel-item,
                 .carousel-item.active {
-                    height: 50vh;
+                    height: 65vh;
                 }
             }
 
@@ -69,8 +69,8 @@
                             <div class="text-white text-center">
                                 <h1 class="mb-3">Affordable Agricultural Products</h1>
                                 <h5 class="mb-4">Get all the supply you need for your grocery store.</h5>
-                                <a class="btn btn-outline-light btn-lg m-2" href="signup.php" role="button">Register Now</a>
-                                <a class="btn btn-outline-light btn-lg m-2" href="product_category.php" role="button">Browse All Products</a>
+                                <a class="btn btn-success btn-lg m-2" href="signup.php" role="button">Register Now</a>
+                                <a class="btn btn-outline-success btn-lg m-2" href="product_category.php" role="button">Browse All Products</a>
                             </div>
                         </div>
                     </div>

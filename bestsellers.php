@@ -1,4 +1,3 @@
-<section style="background-color: #eee;">
     <div class="text-center container py-2">
         <h4 class="mt-4 mb-4"><strong>Top Selling Products</strong></h4>
 
@@ -21,4 +20,3 @@
             ?>
         </div>
     </div>
-</section>

@@ -1,5 +1,4 @@
-<?php $uploads_folder = "assets/uploads/" ?>
-
+<?php $uploads_folder = "../assets/uploads/"; ?>
 
 <div class="col-lg-3 col-md-6 mb-4">
     <div class="card" style="width: 100%;">

@@ -429,8 +429,8 @@ function fetch_last_name($email_address)
 function get_no_cards($product_category)
 {
     global $mysqli_db;
-    $query = "SELECT product_id FROM product WHERE product_type = '$product_category'";
-    $stmt = $mysqli_db->prepare($query);
+    $sql = "SELECT product_id FROM product WHERE product_type = '$product_category'";
+    $stmt = $mysqli_db->prepare($sql);
     $stmt->execute();
     $stmt->store_result();
     $no_of_rows = $stmt->num_rows;

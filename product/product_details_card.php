@@ -1,4 +1,4 @@
-<?php $uploads = "assets/uploads/"; ?>
+<?php $uploads = "../assets/uploads/"; ?>
 
 <div class="container-fluid mt-4">
     <div class="row justify-content-evenly">

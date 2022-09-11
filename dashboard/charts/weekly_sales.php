@@ -65,13 +65,13 @@ for ($i = 0; $i <= 6; $i++) {
                 pointHitRadius: 10,
                 pointBorderWidth: 2,
                 data: [
-                    <?= $sales_data[0] ?>,
-                    <?= $sales_data[1] ?>,
-                    <?= $sales_data[2] ?>,
-                    <?= $sales_data[3] ?>,
-                    <?= $sales_data[4] ?>,
+                    <?= $sales_data[6] ?>,
                     <?= $sales_data[5] ?>,
-                    <?= $sales_data[6] ?>
+                    <?= $sales_data[4] ?>,
+                    <?= $sales_data[3] ?>,
+                    <?= $sales_data[2] ?>,
+                    <?= $sales_data[1] ?>,
+                    <?= $sales_data[0] ?>
                 ],
             }],
         },
