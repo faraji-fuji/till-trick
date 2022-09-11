@@ -41,7 +41,7 @@ if ($_SESSION['login_status']) {
                     <a class="nav-link" href="about_us.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Testimonials</a>
+                    <a class="nav-link" href="index.php#testimonials">Testimonials</a>
                 </li>
                 <li class="nav-item <?= $visibility ?> ">
                     <a class="nav-link" href="cart.php">Cart</a>

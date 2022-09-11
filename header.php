@@ -70,7 +70,7 @@
                                 <h1 class="mb-3">Affordable Agricultural Products</h1>
                                 <h5 class="mb-4">Get all the supply you need for your grocery store.</h5>
                                 <a class="btn btn-success btn-lg m-2" href="signup.php" role="button">Register Now</a>
-                                <a class="btn btn-outline-success btn-lg m-2" href="product_category.php" role="button">Browse All Products</a>
+                                <a class="btn btn-outline-success btn-lg m-2" href="product_category.php" role="button">Learn More</a>
                             </div>
                         </div>
                     </div>

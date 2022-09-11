@@ -49,8 +49,8 @@
                                         </div>
                                         <div class="flex-grow-1 ms-4">
                                             <p class="fw-bold mb-1">Technical support</p>
-                                            <p class="text-muted mb-0">support@example.com</p>
-                                            <p class="text-muted mb-0">+1 234-567-89</p>
+                                            <p class="text-muted mb-0">support@cashcrop.com</p>
+                                            <p class="text-muted mb-0">+254 704 126 876</p>
                                         </div>
                                     </div>
                                 </div>
@@ -61,8 +61,8 @@
                                         </div>
                                         <div class="flex-grow-1 ms-4">
                                             <p class="fw-bold mb-1">Sales questions</p>
-                                            <p class="text-muted mb-0">sales@example.com</p>
-                                            <p class="text-muted mb-0">+1 234-567-89</p>
+                                            <p class="text-muted mb-0">sales@cashcrop.com</p>
+                                            <p class="text-muted mb-0">+254 704 126 876</p>
                                         </div>
                                     </div>
                                 </div>
@@ -73,8 +73,8 @@
                                         </div>
                                         <div class="flex-grow-1 ms-4">
                                             <p class="fw-bold mb-1">Press</p>
-                                            <p class="text-muted mb-0">press@example.com</p>
-                                            <p class="text-muted mb-0">+1 234-567-89</p>
+                                            <p class="text-muted mb-0">press@cashcrop.com</p>
+                                            <p class="text-muted mb-0">+254 704 126 876</p>
                                         </div>
                                     </div>
                                 </div>
@@ -85,8 +85,8 @@
                                         </div>
                                         <div class="flex-grow-1 ms-4">
                                             <p class="fw-bold mb-1">Bug report</p>
-                                            <p class="text-muted mb-0">bugs@example.com</p>
-                                            <p class="text-muted mb-0">+1 234-567-89</p>
+                                            <p class="text-muted mb-0">bugs@cashcrop.com</p>
+                                            <p class="text-muted mb-0">+254 704 126 876</p>
                                         </div>
                                     </div>
                                 </div>

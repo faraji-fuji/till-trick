@@ -14,10 +14,12 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" /> -->
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/index.css">
     <title>Cash Crop</title>
 </head>
 
-<body style="background-color: #DCEDC8;">
+<body class="gradient-custom-shop">
 
     <?php
     include("classes.php");

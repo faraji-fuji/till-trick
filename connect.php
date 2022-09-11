@@ -97,6 +97,15 @@ $query_create_table_cart_item = "CREATE TABLE cart_item(
     cart_id INT
 )";
 
+// testimonial
+$query_create_table_testimonial = " CREATE TABLE testimonial(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender_name VARCHAR(50),
+    sender_address VARCHAR(50),
+    `message` VARCHAR(1000),
+    `status` INT
+)";
+
 // create a database instance
 $mysqli_db = new mysqli($db_hostname, $db_username, $db_password, $db_name);
 
@@ -109,6 +118,7 @@ $mysqli_db->query($query_create_table_transactions);
 $mysqli_db->query($query_create_table_forum);
 $mysqli_db->query($query_create_table_cart);
 $mysqli_db->query($query_create_table_cart_item);
+$mysqli_db->query($query_create_table_testimonial);
 
 //functions to insert data into the tables
 //return 1 on success, 0 on failure
@@ -335,6 +345,36 @@ function insert_into_cart_item(
         return 0;
     }
 }
+
+// testimonial
+function insert_into_testimonial(
+    $sender_name,
+    $sender_address,
+    $message
+) {
+    global $mysqli_db;
+    $sql = "INSERT INTO `testimonial` (
+        `id`, 
+        `sender_name`,
+        `sender_address`,
+        `message`,
+        `status`
+        ) VALUES (
+            NULL,
+            '$sender_name',
+            '$sender_address',
+            '$message',
+            0
+        )";
+    $result = $mysqli_db->query($sql);
+    if ($result) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+
 
 // functionalities
 // function to authenticate users
