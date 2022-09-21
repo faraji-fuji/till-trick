@@ -1,0 +1,1 @@
+<p class="text-muted mb-0"><?= $product_name . " " . $quantity . " " . $product_unit . "(s)" ?></p>

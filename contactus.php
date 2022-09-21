@@ -122,6 +122,7 @@ if (isset($_POST['send'])) {
 
     // save data in the database
     insert_into_contact($sender_name, $sender_address, $message);
+    echo $mysqli_db->error;
 
     // success or failure message
 }

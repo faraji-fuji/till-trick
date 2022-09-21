@@ -16,9 +16,9 @@
                 <a href="#" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a>
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-globe fa-fw me-3"></i><span>International</span></a>
-                <a href="testimonials.php" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-building fa-fw me-3"></i><span>Testimonials</span></a>
+                <a href="orders.php" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a>
+                <a href="messages.php" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-comment fa-fw me-3"></i><span>Messages</span></a>
+                <a href="testimonials.php" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-quote-left fa-fw me-3"></i><span>Testimonials</span></a>
                 <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-calendar fa-fw me-3"></i><span>Calendar</span></a>
                 <a href="users.php" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a>
             </div>

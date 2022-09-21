@@ -60,6 +60,7 @@ $query_create_table_order = "CREATE TABLE orders(
     subtotal INT,
     shipping INT,
     total INT,
+    `status` INT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 )";
 
@@ -135,7 +136,6 @@ $mysqli_db->query($query_create_table_cart);
 $mysqli_db->query($query_create_table_cart_item);
 $mysqli_db->query($query_create_table_testimonial);
 $mysqli_db->query($query_create_table_contact);
-
 
 //functions to insert data into the tables
 //return 1 on success, 0 on failure
@@ -232,12 +232,14 @@ function insert_into_orders(
         `email_address`,
         `subtotal`,
         `shipping`,
-        `total`
+        `total`,
+        `status`
     ) VALUES (
         '$email_address',
         '$subtotal',
         '$shipping',
-        '$total'
+        '$total',
+        0
     )";
     $result = $mysqli_db->query($sql);
     if ($result) {
