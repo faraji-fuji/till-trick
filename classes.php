@@ -1,5 +1,4 @@
 <?php
-
 // class cart
 // properties: cart_array
 // methods add_to_cart, remove_from_cart, print_cart

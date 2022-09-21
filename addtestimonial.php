@@ -45,17 +45,6 @@ include("connect.php");
                       </div>
                     </div>
 
-                    <!-- Email input -->
-                    <!-- <div class="form-outline mb-4">
-                      <input name="sender_address" type="email" id="form4Example2" class="form-control">
-                      <label class="form-label" for="form4Example2" style="margin-left: 0px;">Email address</label>
-                      <div class="form-notch">
-                        <div class="form-notch-leading" style="width: 9px;"></div>
-                        <div class="form-notch-middle" style="width: 88px;"></div>
-                        <div class="form-notch-trailing"></div>
-                      </div>
-                    </div> -->
-
                     <!-- Message input -->
                     <div class="form-outline mb-4">
                       <textarea name="message" class="form-control" id="form4Example3" rows="4"></textarea>

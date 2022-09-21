@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,8 +25,8 @@
 <body class="gradient-custom-shop">
 
     <?php
-    include("classes.php");
-    session_start();
+    // include("classes.php");
+    // session_start();
     if (!isset($_SESSION['login_status'])) {
         $_SESSION['login_status'] = false;
         $_SESSION['profile_photo'] = "";

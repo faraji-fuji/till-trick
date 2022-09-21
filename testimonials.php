@@ -1,7 +1,5 @@
 <?php
-
-
-$sql = "SELECT * from testimonial ORDER BY `id` DESC LIMIT 3";
+$sql = "SELECT * FROM testimonial WHERE `status` = '1' ORDER BY `id` DESC LIMIT 3";
 $res = $mysqli_db->query($sql);
 
 $row1 = $res->fetch_assoc();
@@ -28,13 +26,7 @@ $res = $mysqli_db->query($sql);
 $row3_ = $res->fetch_assoc();
 $row3_image = $row3_['profile_photo'];
 $row3_type = $row3_['member_type'];
-
-
-
 ?>
-
-
-
 
 <div data-draggable="true" class="" style="position: relative;" draggable="false">
     <!---->

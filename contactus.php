@@ -1,4 +1,4 @@
-<div data-draggable="true" style="position: relative;" draggable="false" class="">
+<div data-draggable="true" style="position: relative;" draggable="false" class="" id="contact">
     <!---->
     <!---->
     <section draggable="false" class="overflow-hidden pt-5" data-v-271253ee="">
@@ -9,36 +9,48 @@
                 <div class="card-body py-5 px-md-5">
                     <div class="row gx-lg-5 align-items-center">
                         <div class="col-lg-5 mb-4 mb-lg-0">
-                            <form>
+
+                            <form method="POST" action="index.php#contact">
+
                                 <!-- Name input -->
-                                <div class="form-outline mb-4"> <input type="text" id="form4Example1" class="form-control"> <label class="form-label" for="form4Example1" style="margin-left: 0px;">Name</label>
+                                <div class="form-outline mb-4">
+                                    <input name="sender_name" type="text" id="form4Example1" class="form-control">
+                                    <label class="form-label" for="form4Example1" style="margin-left: 0px;">Name</label>
                                     <div class="form-notch">
                                         <div class="form-notch-leading" style="width: 9px;"></div>
                                         <div class="form-notch-middle" style="width: 42.4px;"></div>
                                         <div class="form-notch-trailing"></div>
                                     </div>
                                 </div>
+
                                 <!-- Email input -->
-                                <div class="form-outline mb-4"> <input type="email" id="form4Example2" class="form-control"> <label class="form-label" for="form4Example2" style="margin-left: 0px;">Email address</label>
+                                <div class="form-outline mb-4">
+                                    <input name="sender_address" type="email" id="form4Example2" class="form-control">
+                                    <label class="form-label" for="form4Example2" style="margin-left: 0px;">Email address</label>
                                     <div class="form-notch">
                                         <div class="form-notch-leading" style="width: 9px;"></div>
                                         <div class="form-notch-middle" style="width: 88px;"></div>
                                         <div class="form-notch-trailing"></div>
                                     </div>
                                 </div>
+
                                 <!-- Message input -->
-                                <div class="form-outline mb-4"> <textarea class="form-control" id="form4Example3" rows="4"></textarea> <label class="form-label" for="form4Example3" style="margin-left: 0px;">Message</label>
+                                <div class="form-outline mb-4">
+                                    <textarea name="message" class="form-control" id="form4Example3" rows="4"></textarea>
+                                    <label class="form-label" for="form4Example3" style="margin-left: 0px;">Message</label>
                                     <div class="form-notch">
                                         <div class="form-notch-leading" style="width: 9px;"></div>
                                         <div class="form-notch-middle" style="width: 60px;"></div>
                                         <div class="form-notch-trailing"></div>
                                     </div>
                                 </div>
-                                <!-- Checkbox -->
-                                <!-- <div class="form-check d-flex justify-content-center mb-4"> <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked=""> <label class="form-check-label" for="form4Example4">Send me a copy of this message</label> </div> -->
+
                                 <!-- Submit button -->
-                                <button type="submit" class="btn btn-success btn-block mb-4" aria-controls="#picker-editor">Send</button>
+                                <button type="submit" name="send" class="btn btn-success btn-block mb-4" aria-controls="#picker-editor">Send</button>
+                                <!-- Submit button -->
                             </form>
+
+
                         </div>
                         <div class="col-lg-7 mb-4 mb-md-0">
                             <div class="row gx-lg-5">
@@ -99,3 +111,18 @@
     </section>
     <!---->
 </div>
+
+<?php
+if (isset($_POST['send'])) {
+
+    // get user data from POST
+    $sender_name = $_POST['sender_name'];
+    $sender_address = $_POST['sender_address'];
+    $message = $_POST['message'];
+
+    // save data in the database
+    insert_into_contact($sender_name, $sender_address, $message);
+
+    // success or failure message
+}
+?>

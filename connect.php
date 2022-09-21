@@ -1,6 +1,12 @@
 <?php
 //this file interacts with the database
 //store access credentials in variables
+// $db_hostname = "sql8.freemysqlhosting.net:3306";
+// $db_username = "sql8519609";
+// $db_password = "aryxFUR65W";
+// $db_name = "sql8519609";
+
+// local host credentials
 $db_hostname = "localhost";
 $db_username = "root";
 $db_password = "";
@@ -106,6 +112,15 @@ $query_create_table_testimonial = " CREATE TABLE testimonial(
     `status` INT
 )";
 
+// contact us
+$query_create_table_contact = " CREATE TABLE contact(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender_name VARCHAR(50),
+    sender_address VARCHAR(50),
+    `message` VARCHAR(1000),
+    `status` INT
+)";
+
 // create a database instance
 $mysqli_db = new mysqli($db_hostname, $db_username, $db_password, $db_name);
 
@@ -119,6 +134,8 @@ $mysqli_db->query($query_create_table_forum);
 $mysqli_db->query($query_create_table_cart);
 $mysqli_db->query($query_create_table_cart_item);
 $mysqli_db->query($query_create_table_testimonial);
+$mysqli_db->query($query_create_table_contact);
+
 
 //functions to insert data into the tables
 //return 1 on success, 0 on failure
@@ -374,6 +391,34 @@ function insert_into_testimonial(
     }
 }
 
+// contact us
+function insert_into_contact(
+    $sender_name,
+    $sender_address,
+    $message
+) {
+    global $mysqli_db;
+    $sql = "INSERT INTO `contact` (
+        `id`, 
+        `sender_name`,
+        `sender_address`,
+        `message`,
+        `status`
+        ) VALUES (
+            NULL,
+            '$sender_name',
+            '$sender_address',
+            '$message',
+            0
+        )";
+    $result = $mysqli_db->query($sql);
+    if ($result) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 
 
 // functionalities
@@ -421,11 +466,6 @@ function login($email_address)
 
         //other session data
         $_SESSION['login_status'] = true;
-
-        //create new cart if cart is not set
-        if (!(isset($_SESSION['cart1']))) {
-            $_SESSION['cart1'] = new cart();
-        }
 
         if ($_SESSION['email_address'] == "admin@cashcrop.com") {
             // redirect admin to dashboard

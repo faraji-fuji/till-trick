@@ -1,0 +1,10 @@
+{
+  "projectName": "cashcrop",
+  "meta": {
+    "type": "backend"
+  },
+  "backend": {
+    "platform": "php7.2"
+  },
+  "hash": "c99aceb0"
+}
