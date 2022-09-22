@@ -1,10 +1,6 @@
 <?php
 //this file interacts with the database
 //store access credentials in variables
-// $db_hostname = "sql8.freemysqlhosting.net:3306";
-// $db_username = "sql8519609";
-// $db_password = "aryxFUR65W";
-// $db_name = "sql8519609";
 
 // local host credentials
 $db_hostname = "localhost";

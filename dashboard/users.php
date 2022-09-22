@@ -33,13 +33,13 @@ function get_user_stats()
     return $user_stats;
 }
 
-
 $user_stats = get_user_stats();
 $producers = $user_stats['suppliers'];
 $consumers = $user_stats['customers'];
-
 $total_users = $producers + $consumers;
 
+
+// list of users
 ?>
 
 <div class="row">
@@ -143,31 +143,24 @@ include("charts/user_distribution.php");
     <tbody>
 
 
-        <tr>
-            <td>
-                <div class="d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
-                    <div class="ms-3">
-                        <p class="fw-bold mb-1">John Doe</p>
-                        <p class="text-muted mb-0">john.doe@gmail.com</p>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <p class="fw-normal mb-1">Software engineer</p>
-                <p class="text-muted mb-0">IT department</p>
-            </td>
-            <td>
-                <span class="badge badge-success rounded-pill d-inline">Active</span>
-            </td>
-            <td>Senior</td>
-            <td>
-                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                    Edit
-                </button>
-            </td>
-        </tr>
+        <?php
+        // list of users
+        $sql = "SELECT * FROM `user`";
+        $res = $mysqli_db->query($sql);
 
+        for ($k = 0; $k < $res->num_rows; $k++) {
+
+            $user = $res->fetch_assoc();
+
+            $first_name = $user['first_name'];
+            $last_name = $user['last_name'];
+            $email_address = $user['email_address'];
+            $profile_photo = $user['profile_photo'];
+            $member_type = $user['member_type'];
+
+            include("user_item.php");
+        }
+        ?>
 
     </tbody>
 </table>
