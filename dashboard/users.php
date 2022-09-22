@@ -1,6 +1,45 @@
 <?php
 include("head.php");
 include("header.php");
+
+
+function get_user_stats()
+{
+    global $mysqli_db;
+
+    //customers
+    $sql = "SELECT COUNT(*) AS customers FROM user WHERE member_type = 'retailer' OR member_type = 'customer' OR member_type = 'institution' ";
+    $res = $mysqli_db->query($sql);
+    $row = $res->fetch_assoc();
+    $customers = $row['customers'];
+
+    // suppliers
+    $sql = "SELECT COUNT(*) AS suppliers FROM user WHERE member_type = 'farmer'";
+    $res = $mysqli_db->query($sql);
+    $row = $res->fetch_assoc();
+    $suppliers = $row['suppliers'];
+
+    // categories
+    $sql = "SELECT DISTINCT `product_type` FROM product";
+    $res = $mysqli_db->query($sql);
+    $categories = $res->num_rows;
+
+    $user_stats = [
+        'customers' => $customers,
+        'suppliers' => $suppliers,
+        'categories' => $categories
+    ];
+
+    return $user_stats;
+}
+
+
+$user_stats = get_user_stats();
+$producers = $user_stats['suppliers'];
+$consumers = $user_stats['customers'];
+
+$total_users = $producers + $consumers;
+
 ?>
 
 <div class="row">
@@ -12,7 +51,7 @@ include("header.php");
                         <i class="fas fa-user text-info fa-3x"></i>
                     </div>
                     <div class="text-end">
-                        <h3>278</h3>
+                        <h3><?= $total_users ?></h3>
                         <p class="mb-0">Total Users</p>
                     </div>
                 </div>
@@ -28,14 +67,13 @@ include("header.php");
                         <i class="fa fa-leaf text-success fa-3x"></i>
                     </div>
                     <div class="text-end">
-                        <h3>156</h3>
+                        <h3><?= $producers ?></h3>
                         <p class="mb-0">Producers</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="col-xl-4 col-sm-6 col-12 mb-4">
         <div class="card">
@@ -45,7 +83,7 @@ include("header.php");
                         <i class="fas fa-hamburger text-warning fa-3x"></i>
                     </div>
                     <div class="text-end">
-                        <h3>156</h3>
+                        <h3><?= $consumers ?></h3>
                         <p class="mb-0">Consumers</p>
                     </div>
                 </div>
@@ -87,7 +125,6 @@ include("header.php");
         </div>
     </div>
 </div>
-
 
 <?php
 include("charts/user_distribution.php");

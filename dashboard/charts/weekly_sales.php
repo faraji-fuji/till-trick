@@ -1,17 +1,24 @@
 <?php
 //sales
 // get sales data over the past seven days and store in an array
+// declare array
 $sales_data = [];
-for ($i = 0; $i <= 6; $i++) {
-    $j = $i + 1;
 
-    $sql = "SELECT SUM(`total`) AS `total` FROM `orders` WHERE `created_at` < now() - INTERVAL $i day AND created_at > now() - INTERVAL $j day";
-    $res = $mysqli_db->query($sql);
+// fetch sales data of the last seven days
+$sql = "SELECT day(created_at) as day, sum(total) as total from orders group by day(created_at) order by day desc limit 7";
+$res = $mysqli_db->query($sql);
+echo $mysqli_db->error;
+
+// iterate and transfer the data into a custom assoc array
+for ($i = 0; $i < 7; $i++) {
     $row = $res->fetch_assoc();
+
     if ($row['total'] == null) {
-        $row['total'] = 0;
+        $sales_data[$i] = 0;
+    } else {
+        // store sales data in an associative array
+        $sales_data[$i] = $row['total'];
     }
-    $sales_data[$i] = $row['total'];
 }
 ?>
 

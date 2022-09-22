@@ -1,6 +1,45 @@
 <?php
 include("head.php");
 include("header.php");
+
+function get_sales_stats()
+{
+    global $mysqli_db;
+
+    // total sales
+    $sql = "SELECT SUM(`total`) as total_sales FROM orders";
+    $res = $mysqli_db->query($sql);
+    $orders = $res->fetch_assoc();
+    $total_sales = $orders['total_sales'];
+
+    // Monthly sales
+    $sql = "SELECT month(created_at) as month, sum(total) as total from orders group by month(created_at) order by month desc limit 1";
+    $res = $mysqli_db->query($sql);
+    $row = $res->fetch_assoc();
+    $monthly_sales = $row['total'];
+
+    // Weekly
+    $sql = "SELECT concat('Week ', week(created_at)) as 'Week', round(avg(total), 2) as 'Average Sale' from orders GROUP by week(created_at)";
+
+    // average daily sales
+
+    // revenue
+
+    // store stats in an array
+    $sales_stats = [
+        'total_sales' => $total_sales,
+        'monthly_sales' => $monthly_sales
+    ];
+
+    return $sales_stats;
+}
+
+// invoke get_sales_stats and save the stats in variables.
+$sales_stats = get_sales_stats();
+$total_sales = $sales_stats['total_sales'];
+$monthly_sales = $sales_stats['monthly_sales'];
+
+
 ?>
 
 <!--Section: Statistics with subtitles-->
@@ -12,11 +51,11 @@ include("header.php");
                     <div class="d-flex justify-content-between p-md-1">
                         <div class="d-flex flex-row">
                             <div class="align-self-center">
-                                <h2 class="h1 mb-0 me-4">$76,456.00</h2>
+                                <h2 class="h1 mb-0 me-4"><?= "KES " . $total_sales ?></h2>
                             </div>
                             <div>
                                 <h4>Total Sales</h4>
-                                <p class="mb-0">Monthly Sales Amount</p>
+                                <p class="mb-0">All Sales Amount</p>
                             </div>
                         </div>
                         <div class="align-self-center">
@@ -32,11 +71,11 @@ include("header.php");
                     <div class="d-flex justify-content-between p-md-1">
                         <div class="d-flex flex-row">
                             <div class="align-self-center">
-                                <h2 class="h1 mb-0 me-4">$36,000.00</h2>
+                                <h2 class="h1 mb-0 me-4"><?= "KES " . $monthly_sales ?></h2>
                             </div>
                             <div>
-                                <h4>Total Cost</h4>
-                                <p class="mb-0">Monthly Cost</p>
+                                <h4>Total Sales</h4>
+                                <p class="mb-0">Monthly Sales</p>
                             </div>
                         </div>
                         <div class="align-self-center">
