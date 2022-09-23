@@ -75,7 +75,7 @@ $monthly_sales = $sales_stats['monthly_sales'];
                             </div>
                             <div>
                                 <h4>Total Sales</h4>
-                                <p class="mb-0">Monthly Sales</p>
+                                <p class="mb-0">Total Monthly Sales</p>
                             </div>
                         </div>
                         <div class="align-self-center">

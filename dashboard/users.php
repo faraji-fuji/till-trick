@@ -135,8 +135,8 @@ include("charts/user_distribution.php");
         <tr>
             <th>Name</th>
             <th>Title</th>
-            <th>Status</th>
-            <th>Position</th>
+            <th>Location</th>
+            <th>Contact</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -157,6 +157,8 @@ include("charts/user_distribution.php");
             $email_address = $user['email_address'];
             $profile_photo = $user['profile_photo'];
             $member_type = $user['member_type'];
+            $user_location = $user['user_location'];
+            $phone = $user['phone_number'];
 
             include("user_item.php");
         }
