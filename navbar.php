@@ -66,7 +66,7 @@ if ($_SESSION['login_status']) {
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li>
-                            <a class="dropdown-item" href="profile.php">My profile</a>
+                            <a class="dropdown-item" href="profile/profile.php">My profile</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#">Settings</a>

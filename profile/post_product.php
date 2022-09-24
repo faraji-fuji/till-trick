@@ -1,6 +1,8 @@
 <?php
 include("head.php");
 include("header.php");
+include("../connect.php");
+
 ?>
 <h5 class="mb-2 text-center text-success">POST YOUR PRODUCT</h5>
 <hr>
@@ -56,8 +58,6 @@ include("header.php");
                         </select>
                     </div>
 
-
-
                     <!-- Product Image Input -->
                     <label for="inputGroupFile02" class="form-label my-2 visually-hidden">Product Image</label>
                     <div class="input-group mb-4">
@@ -75,12 +75,7 @@ include("header.php");
     </div>
 </div>
 
-
-
-
-
 <?php
-
 if (isset($_POST['post'])) {
     // store user input in variables and store them in a database
     $product_name = $_POST['product_name'];
@@ -102,7 +97,7 @@ if (isset($_POST['post'])) {
         $product_owner
     );
 
-    $uploads_dir = "assets/uploads/";
+    $uploads_dir = "../assets/uploads/";
     $destination = $uploads_dir . $_FILES['userfile']['name'];
     $status = move_uploaded_file($_FILES['userfile']['tmp_name'], $destination);
     if ($status) {

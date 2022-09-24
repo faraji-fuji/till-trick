@@ -35,6 +35,69 @@ $email_address = $_SESSION['email_address'];
     </div>
 </div>
 
+<hr>
+<h5 class="text-center text-success mt-2 text-upper mb-2">INVENTORY CHART</h5>
+<hr>
+
+<div>
+    <canvas id="inventoryChart"></canvas>
+</div>
+
+<script>
+    // Inventory Chart
+
+    // create an object named xmlhttp which is an instance of the xmlhttprequest class
+    const xmlhttp = new XMLHttpRequest();
+
+    // define onload property. In this case, the property is a function 
+    xmlhttp.onload = function() {
+        // create object named myObj by parsing the JSON recieved from the xmlhttp request
+        const myObj = JSON.parse(this.responseText);
+
+        // assign properties of the object to 
+        var lab = myObj.labels;
+        var dat = myObj.data;
+
+
+        // setup
+        const data = {
+            labels: lab,
+            datasets: [{
+                label: 'My Inventory',
+                backgroundColor: 'rgb(0, 183, 74)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: dat,
+            }]
+        };
+
+        // config
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            },
+        };
+
+        //  render
+        const myChart = new Chart(
+            document.getElementById('inventoryChart'),
+            config
+        );
+
+    }
+
+    // target file that outputs JSON
+    xmlhttp.open("GET", "inventoryData.php", true);
+
+    // send request
+    xmlhttp.send();
+</script>
+
 
 <?php
 include("footer.php");

@@ -55,7 +55,7 @@ include("../connect.php");
 
             <!-- get forum items from the database and display here iteratively -->
             <?php
-            $sql = "SELECT * FROM `forum` ORDER BY `forum`.`message_id` DESC LIMIT 10";
+            $sql = "SELECT * FROM `forum` ORDER BY `forum`.`message_id` DESC LIMIT 20";
             $rows = $mysqli_db->query($sql);
 
 
