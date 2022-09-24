@@ -16,6 +16,13 @@ if ($_SESSION['login_status']) {
 } else {
     $inverted_visibility = "";
 }
+
+// dashboard visibility
+if ($_SESSION['user_name'] == "admin@cashcrop") {
+    $adminVisibility = "";
+} else {
+    $adminVisibility = "visually-hidden";
+}
 ?>
 
 <!-- Navbar -->
@@ -40,12 +47,15 @@ if ($_SESSION['login_status']) {
                 <li class="nav-item">
                     <a class="nav-link" href="about_us.php">About</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="index.php#testimonials">Testimonials</a>
                 </li>
+
                 <li class="nav-item <?= $visibility ?> ">
                     <a class="nav-link" href="cart.php">Cart</a>
                 </li>
+
                 <li class="nav-item <?= $visibility ?>">
                     <a class="nav-link" href="forum.php">Forum</a>
                 </li>
@@ -53,7 +63,7 @@ if ($_SESSION['login_status']) {
             <!-- left links -->
 
             <!-- Login Button -->
-            <a href="login.php">
+            <a href="pages/login.php">
                 <button type="button" class="btn btn-success <?= $inverted_visibility ?>">LOGIN</button>
             </a>
             <!-- Login Button -->
@@ -69,10 +79,13 @@ if ($_SESSION['login_status']) {
                             <a class="dropdown-item" href="profile/profile.php">My profile</a>
                         </li>
                         <li>
+                            <a class="dropdown-item <?= $adminVisibility ?>" href="dashboard/admin.php">Dashboard</a>
+                        </li>
+                        <li>
                             <a class="dropdown-item" href="#">Settings</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="logout.php">Logout</a>
+                            <a class="dropdown-item" href="pages/logout.php">Logout</a>
                         </li>
                     </ul>
                 </li>

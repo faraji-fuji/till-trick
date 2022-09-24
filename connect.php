@@ -417,8 +417,6 @@ function insert_into_contact(
     }
 }
 
-
-
 // functionalities
 // function to authenticate users
 function authenticate_user($email_address, $user_password)
@@ -468,12 +466,12 @@ function login($email_address)
         if ($_SESSION['email_address'] == "admin@cashcrop.com") {
             // redirect admin to dashboard
             echo "<script>";
-            echo "location.assign('dashboard/admin.php')";
+            echo "location.assign('../dashboard/admin.php')";
             echo "</script>";
         } else {
             // redirect user to index page
             echo "<script>";
-            echo "location.assign('index.php')";
+            echo "location.assign('../index.php')";
             echo "</script>";
         }
     } else {

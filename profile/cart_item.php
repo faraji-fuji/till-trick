@@ -3,7 +3,7 @@
         <div class="d-flex justify-content-between">
             <div class="d-flex flex-row align-items-center">
                 <div>
-                    <img src="assets/uploads/<?= $product_image ?>" class="img-fluid rounded-3 m-0 p-0" alt="Shopping item" style="width: 1.5rem;">
+                    <img src="../assets/uploads/<?= $product_image ?>" class="img-fluid rounded-3 m-0 p-0" alt="Shopping item" style="width: 1.5rem;">
                 </div>
                 <div class="ms-3">
                     <h5 class="fs-6"><?= $product_name ?></h5>

@@ -44,7 +44,7 @@ if ($_SESSION['login_status']) {
                     <a class="nav-link" href="../index.php#testimonials">Testimonials</a>
                 </li>
                 <li class="nav-item <?= $visibility ?> ">
-                    <a class="nav-link" href="../cart.php">Cart</a>
+                    <a class="nav-link" href="../profile/cart.php">Cart</a>
                 </li>
                 <li class="nav-item <?= $visibility ?>">
                     <a class="nav-link" href="../forum.php">Forum</a>
@@ -66,13 +66,13 @@ if ($_SESSION['login_status']) {
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li>
-                            <a class="dropdown-item" href="profile.php">My profile</a>
+                            <a class="dropdown-item" href="../profile/profile.php">My profile</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#">Settings</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="../logout.php">Logout</a>
+                            <a class="dropdown-item" href="../pages/logout.php">Logout</a>
                         </li>
                     </ul>
                 </li>

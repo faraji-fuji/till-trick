@@ -1,4 +1,7 @@
-  <?php include("head.php") ?>
+  <?php
+    include("../head.php");
+    include("../connect.php");
+    ?>
 
   <!-- Section: Design Block -->
   <!-- Section: Design Block -->
@@ -49,7 +52,7 @@
               </div>
 
               <div class="col-lg-6 mb-5 mb-lg-0">
-                  <img src="assets\images\thomas-le-pRJhn4MbsMM-unsplash.jpg" class="w-100 rounded-4 shadow-4" alt="" />
+                  <img src="..\assets\images\thomas-le-pRJhn4MbsMM-unsplash.jpg" class="w-100 rounded-4 shadow-4" alt="" />
               </div>
 
           </div>
@@ -60,7 +63,6 @@
   <!--Footer-->
   <?php
     if (isset($_POST['submit'])) {
-        include("connect.php");
 
         //collect credentials
         $email_address = $_POST['email_address'];
@@ -77,5 +79,5 @@
         }
     }
 
-    include("footer.php") ?>
+    include("../footer.php") ?>
   <!--Footer-->

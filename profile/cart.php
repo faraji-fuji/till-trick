@@ -66,33 +66,16 @@ $keys = array_keys($cart);
                             <h5 class="mb-0">Billing details</h5>
                             <img src="../assets/avatars/<?= $_SESSION['profile_photo'] ?>" class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
                         </div>
-                        <p class="small mb-2">Lipa na Mpesa</p>
-                        <form class="mt-4">
-                            <!-- <div class="form-outline form-white mb-4">
-                                <input type="text" id="typeName" class="form-control form-control-lg" siez="17" placeholder="Cardholder's Name" />
-                                <label class="form-label" for="typeName">Cardholder's Name</label>
-                            </div> -->
 
+                        <p class="small mb-2">Lipa na Mpesa</p>
+
+                        <form class="mt-4">
                             <div class="form-outline  mb-4">
                                 <input type="text" id="typeText" class="form-control form-control-lg" size="10" placeholder="0700000000" minlength="19" maxlength="19" />
                                 <label class="form-label" for="typeText">Phone Number</label>
                             </div>
-
-                            <!-- <div class="row mb-4">
-                                <div class="col-md-6">
-                                    <div class="form-outline form-white">
-                                        <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
-                                        <label class="form-label" for="typeExp">Expiration</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-outline form-white">
-                                        <input type="password" id="typeText" class="form-control form-control-lg" placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                                        <label class="form-label" for="typeText">Cvv</label>
-                                    </div>
-                                </div>
-                            </div> -->
                         </form>
+
                         <hr class="my-4">
                         <div class="d-flex justify-content-between">
                             <p class="mb-2">Subtotal</p>

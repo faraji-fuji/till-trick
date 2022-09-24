@@ -1,9 +1,12 @@
-<?php include("head.php") ?>
+<?php
+include("../head.php");
+include("../connect.php");
+?>
 
 <!-- Section: Design Block -->
 <section class="text-center">
     <!-- Background image -->
-    <div class="p-5 bg-image" style="background-image: url('assets/images/thomas-le-pRJhn4MbsMM-unsplash.jpg'); height: 300px;"></div>
+    <div class="p-5 bg-image" style="background-image: url('../assets/images/thomas-le-pRJhn4MbsMM-unsplash.jpg'); height: 300px;"></div>
     <!-- Background image -->
     <div class="card mx-4 mx-md-5 shadow-5-strong" style="margin-top: -100px; background: hsla(0, 0%, 100%, 0.8); backdrop-filter: blur(30px);">
         <div class="card-body py-5 px-md-5">
@@ -88,8 +91,6 @@
                             <label class="form-label" for="validationDefault08">Repeat Password</label>
                         </div>
 
-
-
                         <!-- Submit button -->
                         <button type="submit" name="register" class="btn btn-success btn-block mb-4">
                             Sign up
@@ -108,8 +109,6 @@
 
 
 <?php
-
-include("connect.php");
 
 if (isset($_POST["register"])) {
     //please sanitize user input
@@ -167,4 +166,4 @@ if (isset($_POST["register"])) {
     }
 }
 
-include("footer.php") ?>
+include("../footer.php") ?>

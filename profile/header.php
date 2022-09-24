@@ -1,9 +1,9 @@
 <!--Main Navigation-->
 <header>
     <!-- Sidebar -->
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
-        <div class="position-sticky">
-            <div class="list-group list-group-flush mx-3 mt-4">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white shadow-5-strong">
+        <div class="position-sticky ">
+            <div class="list-group list-group-flush mx-3 mt-4 bg-dark">
 
                 <a href="profile.php" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                     <i class="fas fa-tachometer-alt fa-fw me-3"></i>
@@ -20,7 +20,7 @@
                     <span>Cart</span>
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                <a href="usefulLinks.php" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="fas fa-chart-line fa-fw me-3"></i>
                     <span>Useful Sites</span>
                 </a>
@@ -44,122 +44,102 @@
                     <i class="fas fa-globe fa-fw me-3">
                     </i><span>Forum</span>
                 </a>
-
-
-
             </div>
         </div>
     </nav>
     <!-- Sidebar -->
 
+
+    <?php
+    if (isset($_SESSION['profile_photo'])) {
+        $profile_photo = $_SESSION['profile_photo'];
+    }
+
+    // hide navbar components (cart, forum, avatar) depending on the login status
+    if ($_SESSION['login_status']) {
+        $visibility = "";
+    } else {
+        $visibility = "visually-hidden";
+    }
+
+    // hide login button if a user is loged in (login button)
+    if ($_SESSION['login_status']) {
+        $inverted_visibility = "visually-hidden";
+    } else {
+        $inverted_visibility = "";
+    }
+    ?>
+
     <!-- Navbar -->
-    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <!-- Container wrapper -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top " style="z-index: 2000;">
         <div class="container-fluid">
+
             <!-- Toggle button -->
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <!-- Brand -->
-            <a class="navbar-brand" href="#">
-                <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="25" alt="" loading="lazy" />
+            <!-- Navbar brand -->
+            <a class="navbar-brand nav-link" href="index.php">
+                <strong>Ca$h Crop</strong>
             </a>
-            <!-- Search form -->
-            <form class="d-none d-md-flex input-group w-auto my-auto">
-                <input autocomplete="off" type="search" class="form-control rounded" placeholder='Search (ctrl + "/" to focus)' style="min-width: 225px" />
-                <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
-            </form>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+                <!-- left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="../index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../product/product_category">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../aboutUs.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.php#testimonials">Testimonials</a>
+                    </li>
 
-            <!-- Right links -->
-            <ul class="navbar-nav ms-auto d-flex flex-row">
-                <!-- Notification dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-bell"></i>
-                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Some news</a></li>
-                        <li><a class="dropdown-item" href="#">Another news</a></li>
-                        <li>
-                            <a class="dropdown-item" href="#">Something else</a>
-                        </li>
-                    </ul>
-                </li>
 
-                <!-- Icon -->
-                <li class="nav-item">
-                    <a class="nav-link me-3 me-lg-0" href="#">
-                        <i class="fas fa-fill-drip"></i>
-                    </a>
-                </li>
-                <!-- Icon -->
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="#">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
+                </ul>
+                <!-- left links -->
 
-                <!-- Icon dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <i class="united kingdom flag m-0"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="united kingdom flag"></i>English
-                                <i class="fa fa-check text-success ms-2"></i></a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="poland flag"></i>Polski</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="china flag"></i>中文</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="japan flag"></i>日本語</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="germany flag"></i>Deutsch</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="france flag"></i>Français</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="spain flag"></i>Español</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="russia flag"></i>Русский</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="portugal flag"></i>Português</a>
-                        </li>
-                    </ul>
-                </li>
+                <!-- Login Button -->
+                <a href="../pages/login.php">
+                    <button type="button" class="btn btn-success <?= $inverted_visibility ?>">LOGIN</button>
+                </a>
+                <!-- Login Button -->
 
-                <!-- Avatar -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22" alt="" loading="lazy" />
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">My profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
+                <!-- avatar -->
+                <ul class="navbar-nav mx-5 <?= $visibility ?> ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <img src="../assets/avatars/<?= $profile_photo ?>" class="rounded-circle" height="22" alt="Avatar" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../pages/logout.php">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- avatar -->
+
+            </div>
         </div>
-        <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
-</header>
-<!--Main Navigation-->
 
-<!-- Main Layout -->
-<main style="margin-top: 58px">
-    <div class="container pt-4">
+    <!--Main Navigation-->
+
+    <!-- Main Layout -->
+    <main style="margin-top: 58px">
+        <div class="container pt-4">

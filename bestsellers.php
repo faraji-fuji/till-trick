@@ -16,7 +16,7 @@
                 $category = $row1['product_type'];
                 $price = $row1['product_price'];
 
-                include("bestsellers_item.php");
+                include("bestSellersItem.php");
             }
             ?>
         </div>
