@@ -18,11 +18,12 @@ if ($_SESSION['login_status']) {
 }
 
 // dashboard visibility
-if ($_SESSION['user_name'] == "admin@cashcrop") {
+if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == "admin@cashcrop") {
     $adminVisibility = "";
-} else {
+ } else {
     $adminVisibility = "visually-hidden";
-}
+ }
+ 
 ?>
 
 <!-- Navbar -->
@@ -42,7 +43,7 @@ if ($_SESSION['user_name'] == "admin@cashcrop") {
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="product/product_category">Products</a>
+                    <a class="nav-link" href="product/product_category.php">Products</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about_us.php">About</a>
