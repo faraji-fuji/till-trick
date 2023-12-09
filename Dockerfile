@@ -1,10 +1,7 @@
-FROM php:8.2-cli
+FROM php:8.2-apache
 
-# Install Apache and PHP extensions
-RUN apt-get update && \
-   apt-get install -y apache2 && \
-   docker-php-ext-install mysqli && \
-   docker-php-ext-enable mysqli
+# Install PHP extensions
+RUN docker-php-ext-install mysqli
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
@@ -15,7 +12,7 @@ COPY . /var/www/html
 # Set the working directory
 WORKDIR /var/www/html
 
-# Copy the Apache configuration fileK
+# Copy the Apache configuration file
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
 
 # Expose the port that Apache is listening on
