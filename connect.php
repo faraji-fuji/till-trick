@@ -3,29 +3,38 @@
 //store access credentials in variables
 
 // local host credentials
-$db_hostname = "localhost";
+$db_hostname = "host.docker.internal";
 $db_username = "root";
-$db_password = "";
+$db_password = "root";
 $db_name = "cashcrop";
 
 // function to create the database, returns 1 on success
 function initialize_db($db_hostname, $db_username, $db_password)
 {
-    global $db_name;
-    $mysqli = new mysqli($db_hostname, $db_username, $db_password);
-    $result = $mysqli->query("CREATE DATABASE '$db_name'");
-    if ($result) {
-        return 1;
-    } else {
-        return 0;
-    }
+   global $db_name;
+   $mysqli = new mysqli($db_hostname, $db_username, $db_password);
+
+   // Check if the database already exists
+   $result = $mysqli->query("SHOW DATABASES LIKE '$db_name'");
+   if ($result->num_rows > 0) {
+       // Database already exists, no need to create it
+       return 1;
+   } else {
+       // Database does not exist, try to create it
+       $result = $mysqli->query("CREATE DATABASE $db_name");
+       if ($result) {
+           return 1;
+       } else {
+           return 0;
+       }
+   }
 }
 
 initialize_db($db_hostname, $db_username, $db_password);
 
 // mysqli queries to create database tables
 // user
-$query_create_table_user = "CREATE TABLE user(
+$query_create_table_user = "CREATE TABLE IF NOT EXISTS user(
     first_name VARCHAR(50),
     last_name VARCHAR(50),
     email_address VARCHAR(50) PRIMARY KEY,
@@ -38,7 +47,7 @@ $query_create_table_user = "CREATE TABLE user(
 )";
 
 // product
-$query_create_table_product = "CREATE TABLE product(
+$query_create_table_product = "CREATE TABLE IF NOT EXISTS product(
     product_name VARCHAR(50),
     product_unit VARCHAR(50),
     product_price VARCHAR(50),
@@ -50,7 +59,7 @@ $query_create_table_product = "CREATE TABLE product(
 )";
 
 // order
-$query_create_table_order = "CREATE TABLE orders(
+$query_create_table_order = "CREATE TABLE IF NOT EXISTS orders(
     id INT AUTO_INCREMENT PRIMARY KEY,
     email_address VARCHAR(50),
     subtotal INT,
@@ -61,7 +70,7 @@ $query_create_table_order = "CREATE TABLE orders(
 )";
 
 // order_item
-$query_create_table_order_item = "CREATE TABLE order_item(
+$query_create_table_order_item = "CREATE TABLE IF NOT EXISTS order_item(
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT,
     order_id INT,
@@ -71,7 +80,7 @@ $query_create_table_order_item = "CREATE TABLE order_item(
 )";
 
 // transactions
-$query_create_table_transactions = "CREATE TABLE transactions(
+$query_create_table_transactions = "CREATE TABLE IF NOT EXISTS transactions(
     id INT AUTO_INCREMENT PRIMARY KEY,
     email_address VARCHAR(50),
     order_id INT,
@@ -79,7 +88,7 @@ $query_create_table_transactions = "CREATE TABLE transactions(
 )";
 
 // forum
-$query_create_table_forum = "CREATE TABLE forum(
+$query_create_table_forum = "CREATE TABLE IF NOT EXISTS forum(
     message_id INT AUTO_INCREMENT PRIMARY KEY,
     message_time DATETIME DEFAULT CURRENT_TIMESTAMP,
     message_content VARCHAR(1000),
@@ -87,13 +96,13 @@ $query_create_table_forum = "CREATE TABLE forum(
 )";
 
 // cart
-$query_create_table_cart = "CREATE TABLE cart(
+$query_create_table_cart = "CREATE TABLE IF NOT EXISTS cart(
     cart_id INT AUTO_INCREMENT PRIMARY KEY,
     cart_owner VARCHAR(50)
 )";
 
 // cart_item
-$query_create_table_cart_item = "CREATE TABLE cart_item(
+$query_create_table_cart_item = "CREATE TABLE IF NOT EXISTS cart_item(
     id INT AUTO_INCREMENT PRIMARY KEY,
     cart_item_id INT,
     cart_item_quantity INT,
@@ -101,7 +110,7 @@ $query_create_table_cart_item = "CREATE TABLE cart_item(
 )";
 
 // testimonial
-$query_create_table_testimonial = " CREATE TABLE testimonial(
+$query_create_table_testimonial = " CREATE TABLE IF NOT EXISTS testimonial(
     id INT AUTO_INCREMENT PRIMARY KEY,
     sender_name VARCHAR(50),
     sender_address VARCHAR(50),
@@ -110,7 +119,7 @@ $query_create_table_testimonial = " CREATE TABLE testimonial(
 )";
 
 // contact us
-$query_create_table_contact = " CREATE TABLE contact(
+$query_create_table_contact = " CREATE TABLE IF NOT EXISTS contact(
     id INT AUTO_INCREMENT PRIMARY KEY,
     sender_name VARCHAR(50),
     sender_address VARCHAR(50),
