@@ -3,22 +3,31 @@
 //store access credentials in variables
 
 // local host credentials
-$db_hostname = "localhost";
+$db_hostname = "host.docker.internal";
 $db_username = "root";
-$db_password = "";
+$db_password = "root";
 $db_name = "cashcrop";
 
 // function to create the database, returns 1 on success
 function initialize_db($db_hostname, $db_username, $db_password)
 {
-    global $db_name;
-    $mysqli = new mysqli($db_hostname, $db_username, $db_password);
-    $result = $mysqli->query("CREATE DATABASE '$db_name'");
-    if ($result) {
-        return 1;
-    } else {
-        return 0;
-    }
+   global $db_name;
+   $mysqli = new mysqli($db_hostname, $db_username, $db_password);
+
+   // Check if the database already exists
+   $result = $mysqli->query("SHOW DATABASES LIKE '$db_name'");
+   if ($result->num_rows > 0) {
+       // Database already exists, no need to create it
+       return 1;
+   } else {
+       // Database does not exist, try to create it
+       $result = $mysqli->query("CREATE DATABASE $db_name");
+       if ($result) {
+           return 1;
+       } else {
+           return 0;
+       }
+   }
 }
 
 initialize_db($db_hostname, $db_username, $db_password);
